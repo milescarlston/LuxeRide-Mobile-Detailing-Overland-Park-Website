@@ -12,27 +12,27 @@ const faqs = [
   {
     question: "What is included in a full car detail in Overland Park?",
     answer:
-      "Our full detail package combines a complete exterior wash, clay bar treatment, polish, and sealant with a thorough interior deep clean including vacuuming, steam cleaning, leather conditioning, and odor elimination. We also clean the engine bay, door jambs, headlights, and exhaust tips for a true bumper-to-bumper restoration.",
+      "You get the works. Our full detail covers everything inside and out. On the exterior, that means a hand wash, clay bar, polish, and sealant. On the interior, we vacuum, steam clean, condition the leather, and eliminate odors. We also take care of the engine bay, door jambs, headlights, and exhaust tips. It is a true bumper-to-bumper clean.",
   },
   {
     question: "How long does a full detail take?",
     answer:
-      "A full car detail typically takes between three and five hours depending on the size and condition of your vehicle. Larger SUVs, trucks, or heavily soiled interiors may require additional time. We recommend setting aside a half day so our technicians can deliver the best possible results without rushing.",
+      "Most full details take between three and five hours. It depends on the size and condition of your vehicle. Bigger SUVs, trucks, or really dirty interiors can take a bit longer. We recommend setting aside a half day so we can do it right without rushing.",
   },
   {
     question: "How often should I get a full detail?",
     answer:
-      "For most drivers in the Overland Park area, we recommend a full detail every four to six months. If you park outdoors, drive frequently on gravel roads, or have kids and pets, a quarterly schedule helps maintain your vehicle's appearance and protects surfaces from long-term wear.",
+      "For most people around Overland Park, every four to six months works great. If you park outside, drive on gravel roads, or have kids and pets, every three months is a good idea. It keeps your car looking great and protects everything from long-term wear.",
   },
   {
     question: "Do you come to my home or office for full detailing?",
     answer:
-      "Yes. LuxeRide is a fully mobile car detailing service. We bring all of our equipment, water, and professional-grade products directly to your home, office, or any location in Overland Park and the surrounding Kansas City metro area. All we need is a standard parking space and access to your vehicle.",
+      "Yes. We are fully mobile. We bring all of our equipment, water, and products right to your driveway, parking lot, or wherever works best for you in Overland Park and the surrounding KC metro. All we need is a regular parking space and access to your vehicle.",
   },
   {
     question: "Is the full detail worth it compared to just an exterior or interior detail?",
     answer:
-      "Absolutely. The full detail package offers the best value because it addresses every surface of your vehicle in a single appointment. You save money compared to booking our exterior and interior services separately, and your car receives extras like engine bay cleaning and door jamb detailing that are not included in the individual packages.",
+      "It really is. The full detail gives you the best value because we take care of everything in one visit. You actually save money compared to booking our exterior and interior services separately. Plus you get extras like engine bay cleaning and door jamb detailing that are not part of the individual packages.",
   },
 ];
 
@@ -74,70 +74,68 @@ export default function FullDetailPage() {
       />
 
       {/* Hero / intro */}
-      <section className="bg-[#0A0A0A] py-16 sm:py-24">
+      <section className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="font-[family-name:var(--font-playfair-display)] text-3xl font-bold tracking-tight text-[#FAFAFA] sm:text-4xl lg:text-5xl">
-              Full Car Detail in Overland Park, KS
+            <h1 className="text-3xl font-bold tracking-tight text-[#1C1C1C] sm:text-4xl lg:text-5xl">
+              Full Car Detail in{" "}
+              <span className="text-[#1E5FAE]">Overland Park, KS</span>
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#FAFAFA]/70">
-              Our full detail package is the most comprehensive service we offer at{" "}
-              {BUSINESS.name}. It merges everything from our exterior wash and detail with
-              our deep interior cleaning into one seamless appointment, giving your vehicle
-              the complete refresh it deserves. Starting at just{" "}
-              <span className="font-semibold text-[#C9A84C]">${service.startingPrice}</span>,
-              a full car detail in Overland Park has never been more convenient or thorough.
+            <p className="mt-6 text-lg leading-relaxed text-[#4A4A4A]">
+              This is our most popular package. It combines everything from our
+              exterior detail and interior detail into one appointment. Your whole car
+              gets cleaned, polished, and protected from bumper to bumper. Starting at
+              just{" "}
+              <span className="font-semibold text-[#1C1C1C]">
+                ${service.startingPrice}
+              </span>
+              , it is the easiest way to get your car looking like new again.
             </p>
           </div>
         </div>
       </section>
 
-      {/* What is a full detail */}
-      <section className="border-t border-white/5 bg-[#0A0A0A] py-16 sm:py-20">
+      {/* What is a full detail + Who should book */}
+      <section className="bg-[#F7F7F5] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
-              <h2 className="text-2xl font-bold tracking-tight text-[#FAFAFA] sm:text-3xl">
+              <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
                 What Is a Full Car Detail?
               </h2>
-              <p className="mt-4 leading-relaxed text-[#FAFAFA]/70">
-                A full car detail goes far beyond an ordinary car wash. It is a
-                bumper-to-bumper reconditioning of your vehicle&rsquo;s exterior and interior
-                surfaces, performed by trained technicians using professional-grade products.
-                On the outside, we hand wash, clay bar, polish, and seal the paint so it
-                regains its factory luster. Tires, wheels, trim, and glass are all addressed
-                individually. On the inside, every surface is vacuumed, steam cleaned, and
-                conditioned — from the dashboard and door panels to the seats, carpet, and
-                headliner.
+              <p className="mt-4 leading-relaxed text-[#4A4A4A]">
+                A full detail goes way beyond a regular car wash. On the outside, we
+                hand wash, clay bar, polish, and seal your paint so it has that
+                deep, fresh shine again. Tires, wheels, trim, and glass all get
+                individual attention. On the inside, every surface gets vacuumed,
+                steam cleaned, and conditioned. Seats, carpet, dashboard, door
+                panels, headliner. All of it.
               </p>
-              <p className="mt-4 leading-relaxed text-[#FAFAFA]/70">
-                What truly sets our full detail apart is the attention to areas most shops
-                overlook. We clean the engine bay to remove grime and road salt buildup, wipe
-                down every door jamb to eliminate trapped dirt, polish the exhaust tips, and
-                restore clarity to oxidized headlights. The result is a vehicle that looks,
-                feels, and smells like it just rolled off the showroom floor.
+              <p className="mt-4 leading-relaxed text-[#4A4A4A]">
+                What really sets this apart is the stuff most places skip. We clean
+                the engine bay, wipe down every door jamb, polish the exhaust tips,
+                and restore cloudy headlights. When we are done, your car looks,
+                feels, and smells like it just came off the lot.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold tracking-tight text-[#FAFAFA] sm:text-3xl">
+              <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
                 Who Should Book a Full Detail?
               </h2>
-              <p className="mt-4 leading-relaxed text-[#FAFAFA]/70">
-                The full detail package is ideal for anyone who wants a complete
-                transformation in a single visit. If you are preparing your car for sale or
-                trade-in, a full detail can significantly boost curb appeal and perceived
-                value. It is also a smart choice after a long Kansas winter when salt, sand,
-                and road grime have accumulated on every surface. Daily commuters, busy
-                parents, and car enthusiasts alike appreciate the convenience of having every
-                inch of their vehicle professionally cleaned without the hassle of visiting a
-                shop.
+              <p className="mt-4 leading-relaxed text-[#4A4A4A]">
+                Getting ready to sell your car or trade it in? A full detail can
+                make a real difference in how buyers see it. Just survived a long
+                Kansas winter with all that salt and road grime? This takes care of
+                everything in one shot. Or maybe you just want your car looking
+                great for the weekend. That works too.
               </p>
-              <p className="mt-4 leading-relaxed text-[#FAFAFA]/70">
-                Because we are a fully mobile service, we come directly to your home or office
-                anywhere in Overland Park, Leawood, Olathe, Lenexa, and the surrounding
-                Kansas City metro area. There is no need to drop off your car or rearrange
-                your schedule. You go about your day while we handle the rest.
+              <p className="mt-4 leading-relaxed text-[#4A4A4A]">
+                We are fully mobile, so we come to you. Your driveway, your office
+                parking lot, wherever is easiest. We serve Overland Park, Leawood,
+                Olathe, Lenexa, and the rest of the KC metro. No need to drop off
+                your car or rearrange your day. You do your thing while we handle
+                the rest.
               </p>
             </div>
           </div>
@@ -145,23 +143,24 @@ export default function FullDetailPage() {
       </section>
 
       {/* What's included */}
-      <section className="border-t border-white/5 bg-[#0A0A0A] py-16 sm:py-20">
+      <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-[#FAFAFA] sm:text-3xl">
+          <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
             What&rsquo;s Included
           </h2>
-          <p className="mt-4 max-w-2xl leading-relaxed text-[#FAFAFA]/70">
-            Every full detail appointment covers the following services from start to finish.
+          <p className="mt-4 max-w-2xl leading-relaxed text-[#4A4A4A]">
+            Every full detail covers the following from start to finish. No
+            shortcuts, no skipped steps.
           </p>
 
           <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {service.features.map((feature) => (
               <li
                 key={feature}
-                className="flex items-start gap-3 rounded-lg border border-white/10 bg-[#1A1A1A] px-5 py-4"
+                className="flex items-start gap-3 rounded-lg border border-gray-200 bg-white px-5 py-4 shadow-sm"
               >
                 <svg
-                  className="mt-0.5 h-5 w-5 shrink-0 text-[#C9A84C]"
+                  className="mt-0.5 h-5 w-5 shrink-0 text-[#10B981]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -173,7 +172,9 @@ export default function FullDetailPage() {
                     d="M5 13l4 4L19 7"
                   />
                 </svg>
-                <span className="text-sm font-medium text-[#FAFAFA]/90">{feature}</span>
+                <span className="text-sm font-medium text-[#1C1C1C]">
+                  {feature}
+                </span>
               </li>
             ))}
           </ul>
@@ -181,22 +182,23 @@ export default function FullDetailPage() {
       </section>
 
       {/* Pricing callout */}
-      <section className="border-t border-white/5 bg-[#0A0A0A] py-16 sm:py-20">
+      <section className="bg-[#F7F7F5] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center rounded-xl border border-[#C9A84C]/20 bg-[#1A1A1A] px-6 py-12 text-center sm:px-12">
-            <p className="text-sm font-medium uppercase tracking-widest text-[#C9A84C]">
+          <div className="flex flex-col items-center rounded-xl border border-gray-200 bg-white px-6 py-12 text-center shadow-sm sm:px-12">
+            <p className="text-sm font-medium uppercase tracking-widest text-[#1E5FAE]">
               Full Detail Package
             </p>
-            <p className="mt-3 text-4xl font-bold text-[#FAFAFA] sm:text-5xl">
-              Starting at $149
+            <p className="mt-3 text-4xl font-bold text-[#1C1C1C] sm:text-5xl">
+              Starting at ${service.startingPrice}
             </p>
-            <p className="mt-3 max-w-lg text-[#FAFAFA]/60">
-              Final pricing depends on vehicle size and condition. Contact us for an accurate
-              quote tailored to your car, truck, or SUV.
+            <p className="mt-3 max-w-lg text-[#4A4A4A]">
+              Final price depends on the size and condition of your vehicle. Reach
+              out and we will give you an accurate quote for your car, truck, or
+              SUV.
             </p>
             <Link
               href="/contact"
-              className="mt-8 inline-block rounded-md bg-[#C9A84C] px-8 py-3.5 text-base font-semibold text-[#0A0A0A] transition-colors hover:bg-[#b8973f]"
+              className="mt-8 inline-block rounded-md bg-[#10B981] px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#059669]"
             >
               Get Your Free Quote
             </Link>
@@ -205,14 +207,14 @@ export default function FullDetailPage() {
       </section>
 
       {/* Our process */}
-      <section className="border-t border-white/5 bg-[#0A0A0A] py-16 sm:py-20">
+      <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-[#FAFAFA] sm:text-3xl">
+          <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
             Our Full Detail Process
           </h2>
-          <p className="mt-4 max-w-2xl leading-relaxed text-[#FAFAFA]/70">
-            We follow a proven, step-by-step workflow to ensure consistent, showroom-quality
-            results on every vehicle we touch.
+          <p className="mt-4 max-w-2xl leading-relaxed text-[#4A4A4A]">
+            Here is how it works. Same steps every time so you get consistent
+            results no matter what.
           </p>
 
           <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -220,33 +222,35 @@ export default function FullDetailPage() {
               {
                 step: "1",
                 title: "Inspection",
-                desc: "We walk around your vehicle, note any existing damage, and identify areas that need extra attention.",
+                desc: "We walk around your vehicle, check for any existing damage, and figure out which areas need extra attention.",
               },
               {
                 step: "2",
                 title: "Exterior Restoration",
-                desc: "Hand wash, clay bar decontamination, machine polish, sealant, tire and wheel detail, plus glass cleaning.",
+                desc: "Hand wash, clay bar, machine polish, sealant, tire and wheel detail, and glass cleaning. The outside gets the full treatment.",
               },
               {
                 step: "3",
                 title: "Interior Deep Clean",
-                desc: "Full vacuum, steam cleaning of upholstery, leather conditioning, dashboard detail, and odor elimination.",
+                desc: "Full vacuum, steam cleaning, leather conditioning, dashboard detail, and odor elimination. Every surface gets attention.",
               },
               {
                 step: "4",
                 title: "Finishing Touches",
-                desc: "Engine bay degrease and dress, door jamb wipe-down, headlight cleaning, exhaust tip polish, and air freshener.",
+                desc: "Engine bay cleaning, door jamb wipe-down, headlight restoration, exhaust tip polish, and a fresh air freshener to top it off.",
               },
             ].map((item) => (
               <li
                 key={item.step}
-                className="rounded-lg border border-white/10 bg-[#1A1A1A] p-6"
+                className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm"
               >
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#C9A84C]/10 text-sm font-bold text-[#C9A84C]">
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#1E5FAE]/10 text-sm font-bold text-[#1E5FAE]">
                   {item.step}
                 </span>
-                <h3 className="mt-4 text-lg font-semibold text-[#FAFAFA]">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#FAFAFA]/60">
+                <h3 className="mt-4 text-lg font-semibold text-[#1C1C1C]">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-[#4A4A4A]">
                   {item.desc}
                 </p>
               </li>
@@ -256,32 +260,34 @@ export default function FullDetailPage() {
       </section>
 
       {/* Related services */}
-      <section className="border-t border-white/5 bg-[#0A0A0A] py-16 sm:py-20">
+      <section className="bg-[#F7F7F5] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-[#FAFAFA] sm:text-3xl">
+          <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
             Related Services
           </h2>
-          <p className="mt-4 max-w-2xl leading-relaxed text-[#FAFAFA]/70">
-            Looking for something more specific? Explore our individual packages or upgrade
-            to long-lasting ceramic protection.
+          <p className="mt-4 max-w-2xl leading-relaxed text-[#4A4A4A]">
+            Need just the inside or outside done? Or want to add long-lasting
+            ceramic protection? Check out these options.
           </p>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
             {SERVICES.filter((s) =>
-              ["exterior-detail", "interior-detail", "ceramic-coating"].includes(s.slug)
+              ["exterior-detail", "interior-detail", "ceramic-coating"].includes(
+                s.slug
+              )
             ).map((related) => (
               <Link
                 key={related.slug}
                 href={`/services/${related.slug}`}
-                className="group rounded-lg border border-white/10 bg-[#1A1A1A] p-6 transition-colors hover:border-[#C9A84C]/30"
+                className="group rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-colors hover:border-[#1E5FAE]/30"
               >
-                <h3 className="text-lg font-semibold text-[#FAFAFA] group-hover:text-[#C9A84C]">
+                <h3 className="text-lg font-semibold text-[#1C1C1C] group-hover:text-[#1E5FAE]">
                   {related.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#FAFAFA]/60">
+                <p className="mt-2 text-sm leading-relaxed text-[#4A4A4A]">
                   {related.description}
                 </p>
-                <p className="mt-4 text-sm font-medium text-[#C9A84C]">
+                <p className="mt-4 text-sm font-medium text-[#1E5FAE]">
                   Starting at ${related.startingPrice}{" "}
                   <span aria-hidden="true">&rarr;</span>
                 </p>
@@ -292,12 +298,12 @@ export default function FullDetailPage() {
       </section>
 
       {/* FAQ section */}
-      <section className="border-t border-white/5 bg-[#0A0A0A] py-16 sm:py-20">
+      <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-[#FAFAFA] sm:text-3xl">
+          <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
             Full Detail FAQs
           </h2>
-          <p className="mt-4 max-w-2xl leading-relaxed text-[#FAFAFA]/70">
+          <p className="mt-4 max-w-2xl leading-relaxed text-[#4A4A4A]">
             Common questions about our full car detail service in Overland Park.
           </p>
           <div className="mt-10 max-w-3xl">
@@ -308,8 +314,8 @@ export default function FullDetailPage() {
 
       {/* CTA */}
       <CTASection
-        headline="Ready for a Bumper-to-Bumper Transformation?"
-        description="Book your full car detail in Overland Park today. We bring showroom-quality results directly to your driveway."
+        headline="Ready for a Complete Clean?"
+        description="Book your full car detail in Overland Park today. We come to you and take care of everything from bumper to bumper."
         buttonText="Book Your Full Detail"
       />
     </>

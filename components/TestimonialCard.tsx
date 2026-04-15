@@ -7,13 +7,13 @@ interface TestimonialProps {
 
 export default function TestimonialCard({ name, vehicle, rating, quote }: TestimonialProps) {
   return (
-    <figure className="flex flex-col rounded-xl border border-white/10 bg-[#1A1A1A] p-6">
+    <figure className="flex flex-col rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
       {/* Stars */}
       <div className="mb-3 flex gap-0.5" aria-label={`${rating} out of 5 stars`}>
         {Array.from({ length: 5 }).map((_, i) => (
           <svg
             key={i}
-            className={`h-4 w-4 ${i < rating ? "text-[#C9A84C]" : "text-[#FAFAFA]/20"}`}
+            className={`h-4 w-4 ${i < rating ? "text-yellow-400" : "text-gray-200"}`}
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -21,12 +21,12 @@ export default function TestimonialCard({ name, vehicle, rating, quote }: Testim
           </svg>
         ))}
       </div>
-      <blockquote className="flex-1 text-sm leading-relaxed text-[#FAFAFA]/70">
+      <blockquote className="flex-1 text-sm leading-relaxed text-[#4A4A4A]">
         &ldquo;{quote}&rdquo;
       </blockquote>
-      <figcaption className="mt-4 border-t border-white/10 pt-4">
-        <span className="block text-sm font-semibold text-[#FAFAFA]">{name}</span>
-        <span className="text-xs text-[#FAFAFA]/50">{vehicle}</span>
+      <figcaption className="mt-4 border-t border-gray-100 pt-4">
+        <span className="block text-sm font-semibold text-[#1C1C1C]">{name}</span>
+        <span className="text-xs text-[#4A4A4A]">{vehicle}</span>
       </figcaption>
     </figure>
   );

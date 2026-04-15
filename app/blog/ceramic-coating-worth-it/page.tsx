@@ -50,399 +50,420 @@ export default function CeramicCoatingWorthItPage() {
         ]}
       />
 
-      <article className="bg-[#0A0A0A] py-16 sm:py-24">
+      <article className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           {/* ---- Header ---- */}
           <header>
-            <h1 className="font-[family-name:var(--font-playfair-display)] text-3xl font-bold tracking-tight text-[#FAFAFA] sm:text-4xl lg:text-5xl">
+            <h1 className="text-3xl font-bold tracking-tight text-[#1C1C1C] sm:text-4xl lg:text-5xl">
               Is Ceramic Coating Worth It? A Detailed Breakdown
             </h1>
 
-            <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-[#FAFAFA]/50">
+            <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-[#4A4A4A]">
               <span>By LuxeRide Team</span>
-              <span className="h-1 w-1 rounded-full bg-[#FAFAFA]/30" />
+              <span className="h-1 w-1 rounded-full bg-gray-300" />
               <time dateTime="2024-11-28">November 28, 2024</time>
-              <span className="h-1 w-1 rounded-full bg-[#FAFAFA]/30" />
+              <span className="h-1 w-1 rounded-full bg-gray-300" />
               <span>7 min read</span>
             </div>
           </header>
 
           {/* ---- Body ---- */}
-          <div className="mt-12 space-y-10 text-base leading-relaxed text-[#FAFAFA]/80">
+          <div className="mt-12 space-y-10 text-base leading-relaxed text-[#4A4A4A]">
             {/* Intro */}
             <p>
-              If you have been researching ways to protect your vehicle&rsquo;s
-              paint, you have almost certainly come across ceramic coating. The
-              claims sound impressive&mdash;years of protection, effortless
-              cleaning, and a permanent glossy finish. But is ceramic coating
-              worth it for the average car owner, or is it just marketing hype?
-              Below, we break down exactly what ceramic coating is, what it can
-              and cannot do, and how to decide whether it belongs on your
-              vehicle.
+              Let&rsquo;s be real: ceramic coating is an investment. If
+              you&rsquo;ve been looking into ways to protect your car&rsquo;s
+              paint, you&rsquo;ve probably seen some big claims about it.
+              Years of protection. Self-cleaning surfaces. A permanent glossy
+              finish. Some of that is true, and some of it is oversold. So is
+              ceramic coating worth it for everyday car owners, or is it just
+              hype? Here&rsquo;s what it actually does and doesn&rsquo;t do,
+              along with a straightforward look at costs, so you can make your
+              own call.
             </p>
 
             {/* What ceramic coating actually is */}
             <section>
-              <h2 className="text-2xl font-semibold text-[#FAFAFA]">
+              <h2 className="text-2xl font-semibold text-[#1C1C1C]">
                 What Is Ceramic Coating?
               </h2>
               <p className="mt-4">
-                A ceramic coating is a liquid polymer made primarily of silicon
-                dioxide (SiO&#8322;) that chemically bonds to your vehicle&rsquo;s
-                clear coat when applied. Once cured, it forms an ultra-thin,
-                transparent layer of nano-ceramic protection that sits on top of
-                the paint. Unlike traditional wax or sealants that sit on the
-                surface and wear off in weeks, a professional-grade{" "}
+                Ceramic coating is a liquid polymer (mostly silicon dioxide)
+                that bonds to your car&rsquo;s clear coat when applied. Once
+                it cures, it creates a thin, transparent protective layer on
+                top of the paint. Unlike wax or sealants that sit on the
+                surface and wear off in a few weeks, a professional-grade{" "}
                 <Link
                   href="/services/ceramic-coating"
-                  className="text-[#C9A84C] underline underline-offset-2 transition-colors hover:text-[#b8973f]"
+                  className="text-[#1E5FAE] underline underline-offset-2 transition-colors hover:text-[#174a8a]"
                 >
                   ceramic coating
                 </Link>{" "}
-                bonds at a molecular level and can last for years with proper
-                maintenance.
+                bonds at the molecular level and lasts for years if you take
+                care of it.
               </p>
             </section>
 
             {/* Real benefits */}
             <section>
-              <h2 className="text-2xl font-semibold text-[#FAFAFA]">
+              <h2 className="text-2xl font-semibold text-[#1C1C1C]">
                 The Real Benefits of Ceramic Coating
               </h2>
               <p className="mt-4">
-                There are several genuine, measurable advantages that make
-                ceramic coating a popular choice among car enthusiasts and
-                everyday drivers alike:
+                Here are the benefits that actually matter in the real world:
               </p>
               <ul className="mt-4 list-disc space-y-2 pl-6">
                 <li>
-                  <strong className="text-[#FAFAFA]">
-                    Hydrophobic surface.
+                  <strong className="text-[#1C1C1C]">
+                    Water beads off the surface.
                   </strong>{" "}
-                  Water beads up and rolls off the paint, carrying dirt and grime
-                  with it. This self-cleaning effect is one of the most
-                  immediately noticeable perks after application.
+                  This is the first thing you&rsquo;ll notice. Rain hits your
+                  car and rolls right off, carrying dirt with it. Your car
+                  stays cleaner between washes, and it looks great in the rain.
                 </li>
                 <li>
-                  <strong className="text-[#FAFAFA]">UV protection.</strong>{" "}
-                  Kansas summers are brutal on automotive paint. Ceramic coating
-                  blocks harmful UV rays, preventing the oxidation and fading
-                  that gradually dulls your finish over time.
-                </li>
-                <li>
-                  <strong className="text-[#FAFAFA]">
-                    Chemical resistance.
+                  <strong className="text-[#1C1C1C]">
+                    Bird droppings and tree sap don&rsquo;t etch the paint.
                   </strong>{" "}
-                  Bird droppings, tree sap, road salt, and acidic contaminants
-                  are less likely to etch or stain a coated surface because the
-                  coating acts as a sacrificial barrier between those substances
-                  and your clear coat.
+                  Kansas summers are tough on cars. With a coating, acidic
+                  contaminants like bird droppings and tree sap sit on the
+                  coating instead of attacking your clear coat directly. You
+                  still need to clean them off, but they won&rsquo;t leave
+                  permanent marks.
                 </li>
                 <li>
-                  <strong className="text-[#FAFAFA]">Easier cleaning.</strong>{" "}
-                  Because contaminants have a harder time bonding to the coated
-                  surface, regular washes become faster and require less
-                  scrubbing, reducing the risk of introducing new swirl marks.
-                </li>
-                <li>
-                  <strong className="text-[#FAFAFA]">
-                    Enhanced gloss and depth.
+                  <strong className="text-[#1C1C1C]">
+                    UV protection that actually works.
                   </strong>{" "}
-                  A quality ceramic coating amplifies the reflective properties
-                  of your paint, giving it a deep, wet-look shine that wax alone
-                  struggles to match.
+                  The coating blocks UV rays, which means your paint
+                  won&rsquo;t fade and oxidize as fast. If your car sits
+                  outside all day, this matters a lot.
+                </li>
+                <li>
+                  <strong className="text-[#1C1C1C]">
+                    You don&rsquo;t need to wax ever again.
+                  </strong>{" "}
+                  No more buying wax, spending a Saturday applying it, and
+                  repeating the whole process every month. The coating replaces
+                  all of that for years.
+                </li>
+                <li>
+                  <strong className="text-[#1C1C1C]">
+                    Washes take half the time.
+                  </strong>{" "}
+                  Dirt and grime don&rsquo;t stick the same way. A quick rinse
+                  and gentle wash is usually all it takes. Less scrubbing also
+                  means fewer chances of adding swirl marks.
                 </li>
               </ul>
             </section>
 
             {/* What it doesn't do */}
             <section>
-              <h2 className="text-2xl font-semibold text-[#FAFAFA]">
+              <h2 className="text-2xl font-semibold text-[#1C1C1C]">
                 What Ceramic Coating Does Not Do
               </h2>
               <p className="mt-4">
-                Unrealistic expectations are the fastest way to feel
-                disappointed with any product. Ceramic coating is not a magic
-                force field. Here is what it will not do:
+                We want to set expectations up front, because disappointment
+                usually comes from believing the marketing too much. A ceramic
+                coating is not a force field.
               </p>
               <ul className="mt-4 list-disc space-y-2 pl-6">
                 <li>
-                  <strong className="text-[#FAFAFA]">
+                  <strong className="text-[#1C1C1C]">
                     It is not scratch-proof.
                   </strong>{" "}
-                  A coating adds a degree of scratch resistance at the
-                  microscopic level, but it will not prevent rock chips, key
-                  scratches, or damage from improper washing. If your paint
-                  already has swirl marks or deeper defects, those should be
-                  corrected with a{" "}
-                  <Link
-                    href="/services/paint-correction"
-                    className="text-[#C9A84C] underline underline-offset-2 transition-colors hover:text-[#b8973f]"
-                  >
-                    paint correction
-                  </Link>{" "}
-                  before the coating is applied.
+                  It adds some scratch resistance at a microscopic level, but
+                  it will not stop rock chips, key scratches, or damage from
+                  bad wash habits. If your paint already has swirl marks or
+                  scratches, those need to be fixed before the coating goes on.
                 </li>
                 <li>
-                  <strong className="text-[#FAFAFA]">
+                  <strong className="text-[#1C1C1C]">
                     It does not replace washing.
                   </strong>{" "}
                   Your car will still get dirty. The difference is that dirt
-                  releases more easily and you can maintain a cleaner appearance
-                  between washes.
+                  comes off easier and your car stays cleaner longer between
+                  washes.
                 </li>
                 <li>
-                  <strong className="text-[#FAFAFA]">
+                  <strong className="text-[#1C1C1C]">
                     It is not permanent.
                   </strong>{" "}
-                  Even the best professional coatings eventually wear down.
-                  &ldquo;Lifetime&rdquo; claims from some brands typically
-                  require regular maintenance top-ups and inspections to honor
-                  their warranty.
+                  Even the best professional coatings wear down over time.
+                  &ldquo;Lifetime&rdquo; claims from some brands usually
+                  require regular maintenance visits and inspections to keep
+                  the warranty valid.
                 </li>
               </ul>
             </section>
 
             {/* Cost breakdown */}
             <section>
-              <h2 className="text-2xl font-semibold text-[#FAFAFA]">
-                Cost Breakdown: What Affects Pricing
+              <h2 className="text-2xl font-semibold text-[#1C1C1C]">
+                Cost Breakdown: What You Can Expect to Pay
               </h2>
               <p className="mt-4">
-                Professional ceramic coating typically ranges from $500 to
-                $2,000 or more depending on several factors:
+                Professional ceramic coating typically runs between $500 and
+                $2,000 or more. Here&rsquo;s what affects the price:
               </p>
               <ul className="mt-4 list-disc space-y-2 pl-6">
                 <li>
-                  <strong className="text-[#FAFAFA]">Vehicle size.</strong>{" "}
-                  Larger vehicles like SUVs and trucks require more product and
-                  more time.
+                  <strong className="text-[#1C1C1C]">Vehicle size.</strong>{" "}
+                  An SUV or truck takes more product and more time than a
+                  sedan.
                 </li>
                 <li>
-                  <strong className="text-[#FAFAFA]">
-                    Paint condition.
-                  </strong>{" "}
-                  If your paint needs correction before coating, the prep work
-                  adds to the total cost but dramatically improves the final
-                  result.
+                  <strong className="text-[#1C1C1C]">Paint condition.</strong>{" "}
+                  If your paint needs correction before coating (swirl marks,
+                  scratches, oxidation), the prep work adds to the total. But
+                  it makes a huge difference in the final result.
                 </li>
                 <li>
-                  <strong className="text-[#FAFAFA]">Coating grade.</strong>{" "}
+                  <strong className="text-[#1C1C1C]">Coating grade.</strong>{" "}
                   Consumer-grade products are cheaper but typically last 1 to 2
                   years. Professional-grade coatings last 2 to 5 years and
-                  deliver noticeably stronger protection.
+                  provide noticeably stronger protection.
                 </li>
                 <li>
-                  <strong className="text-[#FAFAFA]">Number of layers.</strong>{" "}
+                  <strong className="text-[#1C1C1C]">
+                    Number of layers.
+                  </strong>{" "}
                   Some packages include multiple coating layers for added
                   durability and depth.
                 </li>
               </ul>
               <p className="mt-4">
-                When you factor in the reduced need for frequent waxing,
-                sealant reapplications, and the time saved on easier washes,
-                ceramic coating often pays for itself over the life of
-                ownership&mdash;especially if you plan to keep your vehicle for
-                more than a couple of years.
+                When you add up what you&rsquo;d spend on wax, sealant
+                reapplications, and the time you save on easier washes, ceramic
+                coating often pays for itself over the life of ownership. This
+                is especially true if you plan to keep your vehicle for more
+                than a couple of years.
               </p>
             </section>
 
             {/* How long it lasts */}
             <section>
-              <h2 className="text-2xl font-semibold text-[#FAFAFA]">
+              <h2 className="text-2xl font-semibold text-[#1C1C1C]">
                 How Long Does Ceramic Coating Last?
               </h2>
               <p className="mt-4">
-                Longevity depends on the product and how well you maintain it.
-                As a general guide:
+                It depends on the product and how well you take care of it.
+                Here&rsquo;s a general guide:
               </p>
               <ul className="mt-4 list-disc space-y-2 pl-6">
                 <li>
-                  <strong className="text-[#FAFAFA]">
+                  <strong className="text-[#1C1C1C]">
                     Consumer-grade (DIY):
                   </strong>{" "}
                   6 months to 2 years.
                 </li>
                 <li>
-                  <strong className="text-[#FAFAFA]">Professional-grade:</strong>{" "}
-                  2 to 5 years with proper care, including the use of
-                  pH-neutral car wash soap and periodic decontamination washes.
+                  <strong className="text-[#1C1C1C]">
+                    Professional-grade:
+                  </strong>{" "}
+                  2 to 5 years with proper care. That means using pH-neutral
+                  car wash soap and doing occasional decontamination washes.
                 </li>
               </ul>
               <p className="mt-4">
-                Vehicles that are garaged, washed regularly, and kept out of
-                harsh conditions will see the coating last significantly longer
-                than those parked outdoors and neglected.
+                Cars that are garaged, washed regularly, and kept out of harsh
+                conditions will see the coating last a lot longer than ones
+                parked outside and neglected. Regular{" "}
+                <Link
+                  href="/services/exterior-detail"
+                  className="text-[#1E5FAE] underline underline-offset-2 transition-colors hover:text-[#174a8a]"
+                >
+                  exterior detailing
+                </Link>{" "}
+                helps too.
               </p>
             </section>
 
             {/* Ceramic vs wax vs sealant */}
             <section>
-              <h2 className="text-2xl font-semibold text-[#FAFAFA]">
+              <h2 className="text-2xl font-semibold text-[#1C1C1C]">
                 Ceramic Coating vs. Wax vs. Paint Sealant
               </h2>
               <div className="mt-4 overflow-x-auto">
                 <table className="w-full text-left text-sm">
                   <thead>
-                    <tr className="border-b border-white/10 text-[#FAFAFA]">
+                    <tr className="border-b border-gray-200 text-[#1C1C1C]">
                       <th className="py-3 pr-4 font-semibold">Feature</th>
                       <th className="py-3 pr-4 font-semibold">Carnauba Wax</th>
                       <th className="py-3 pr-4 font-semibold">Paint Sealant</th>
                       <th className="py-3 font-semibold">Ceramic Coating</th>
                     </tr>
                   </thead>
-                  <tbody className="text-[#FAFAFA]/70">
-                    <tr className="border-b border-white/10">
-                      <td className="py-3 pr-4 font-medium text-[#FAFAFA]">Durability</td>
-                      <td className="py-3 pr-4">4 &ndash; 8 weeks</td>
-                      <td className="py-3 pr-4">3 &ndash; 6 months</td>
-                      <td className="py-3">2 &ndash; 5 years</td>
+                  <tbody className="text-[#4A4A4A]">
+                    <tr className="border-b border-gray-200">
+                      <td className="py-3 pr-4 font-medium text-[#1C1C1C]">
+                        Durability
+                      </td>
+                      <td className="py-3 pr-4">4 to 8 weeks</td>
+                      <td className="py-3 pr-4">3 to 6 months</td>
+                      <td className="py-3">2 to 5 years</td>
                     </tr>
-                    <tr className="border-b border-white/10">
-                      <td className="py-3 pr-4 font-medium text-[#FAFAFA]">Hydrophobic</td>
+                    <tr className="border-b border-gray-200">
+                      <td className="py-3 pr-4 font-medium text-[#1C1C1C]">
+                        Hydrophobic
+                      </td>
                       <td className="py-3 pr-4">Moderate</td>
                       <td className="py-3 pr-4">Good</td>
                       <td className="py-3">Excellent</td>
                     </tr>
-                    <tr className="border-b border-white/10">
-                      <td className="py-3 pr-4 font-medium text-[#FAFAFA]">UV Protection</td>
+                    <tr className="border-b border-gray-200">
+                      <td className="py-3 pr-4 font-medium text-[#1C1C1C]">
+                        UV Protection
+                      </td>
                       <td className="py-3 pr-4">Minimal</td>
                       <td className="py-3 pr-4">Moderate</td>
                       <td className="py-3">Strong</td>
                     </tr>
-                    <tr className="border-b border-white/10">
-                      <td className="py-3 pr-4 font-medium text-[#FAFAFA]">Gloss</td>
+                    <tr className="border-b border-gray-200">
+                      <td className="py-3 pr-4 font-medium text-[#1C1C1C]">
+                        Gloss
+                      </td>
                       <td className="py-3 pr-4">Warm glow</td>
                       <td className="py-3 pr-4">High shine</td>
                       <td className="py-3">Deep, wet look</td>
                     </tr>
                     <tr>
-                      <td className="py-3 pr-4 font-medium text-[#FAFAFA]">Cost</td>
+                      <td className="py-3 pr-4 font-medium text-[#1C1C1C]">
+                        Cost
+                      </td>
                       <td className="py-3 pr-4">Low</td>
-                      <td className="py-3 pr-4">Low &ndash; Medium</td>
-                      <td className="py-3">Medium &ndash; High</td>
+                      <td className="py-3 pr-4">Low to Medium</td>
+                      <td className="py-3">Medium to High</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
               <p className="mt-4">
-                Wax offers a warm, natural look and is great for show cars, but
-                it wears off quickly. Sealants bridge the gap with more
-                durability, yet they still require reapplication several times a
-                year. Ceramic coating is the longest-lasting option and provides
-                the strongest overall protection, making it the best value for
-                drivers who want low-maintenance, long-term paint care.
+                Wax gives a warm, natural look and works great for show cars,
+                but it wears off fast. Sealants last longer but still need
+                reapplication a few times a year. Ceramic coating is the
+                longest-lasting option and gives the strongest overall
+                protection. For most people who just want their car to look
+                good without constant upkeep, it&rsquo;s the best value.
               </p>
             </section>
 
             {/* Who it's best for */}
             <section>
-              <h2 className="text-2xl font-semibold text-[#FAFAFA]">
-                Who Is Ceramic Coating Best For?
+              <h2 className="text-2xl font-semibold text-[#1C1C1C]">
+                Who Should Get Ceramic Coating?
               </h2>
               <p className="mt-4">
-                Ceramic coating is an excellent investment if you fall into one
-                or more of these categories:
+                Ceramic coating makes the most sense if any of these sound like
+                you:
               </p>
               <ul className="mt-4 list-disc space-y-2 pl-6">
-                <li>You plan to keep your vehicle for several years.</li>
-                <li>You want to reduce the time and effort spent on washing.</li>
                 <li>
-                  Your car is parked outdoors and exposed to sun, tree sap, or
-                  bird droppings regularly.
+                  You plan to keep your vehicle for several years and want to
+                  protect the paint that whole time.
                 </li>
                 <li>
-                  You value maintaining your vehicle&rsquo;s resale value with a
-                  well-protected finish.
+                  You&rsquo;re tired of waxing and want something that lasts
+                  without constant reapplication.
                 </li>
                 <li>
-                  You drive a newer or recently corrected vehicle with paint
-                  worth preserving.
+                  Your car parks outside and deals with sun, tree sap, or bird
+                  droppings on a regular basis.
+                </li>
+                <li>
+                  You want to protect your car&rsquo;s resale value by keeping
+                  the paint in great shape.
+                </li>
+                <li>
+                  You have a newer car or recently had the paint corrected and
+                  want to lock in that finish.
                 </li>
               </ul>
             </section>
 
             {/* Professional vs DIY */}
             <section>
-              <h2 className="text-2xl font-semibold text-[#FAFAFA]">
+              <h2 className="text-2xl font-semibold text-[#1C1C1C]">
                 Professional Application vs. DIY
               </h2>
               <p className="mt-4">
-                DIY ceramic coating kits are widely available and cost anywhere
-                from $30 to $150. They can provide a noticeable improvement in
-                water repellency and gloss, but they come with limitations.
-                Consumer-grade formulas are thinner, wear faster, and are far
-                less forgiving during application. High spots, uneven coverage,
-                and streaking are common mistakes that can leave the finish
-                looking worse than before.
+                DIY ceramic coating kits cost anywhere from $30 to $150. They
+                can make a noticeable difference in water repellency and shine,
+                but they have real limitations. Consumer-grade formulas are
+                thinner, wear out faster, and are not forgiving when you make
+                mistakes during application. High spots, uneven coverage, and
+                streaking are common problems that can make the finish look
+                worse than before you started.
               </p>
               <p className="mt-4">
                 A professional application starts with thorough paint
-                decontamination and, when needed, multi-stage{" "}
+                decontamination and correction to remove swirls and
+                imperfections. The coating is then applied in a controlled
+                environment, allowed to cure properly, and inspected under
+                specialized lighting to make sure coverage is even across the
+                entire vehicle. The result is a stronger bond, longer life, and
+                a finish that looks and performs the way ceramic coating is
+                supposed to. Starting with a{" "}
                 <Link
-                  href="/services/paint-correction"
-                  className="text-[#C9A84C] underline underline-offset-2 transition-colors hover:text-[#b8973f]"
+                  href="/services/full-detail"
+                  className="text-[#1E5FAE] underline underline-offset-2 transition-colors hover:text-[#174a8a]"
                 >
-                  paint correction
+                  full detail
                 </Link>{" "}
-                to remove swirls and imperfections. The coating is then applied
-                in a controlled environment, allowed to cure properly, and
-                inspected under specialized lighting to ensure full, even
-                coverage. The result is a stronger bond, longer durability, and a
-                finish that truly looks and performs the way ceramic coating is
-                meant to.
+                before coating gives you the best possible foundation.
               </p>
             </section>
 
             {/* Conclusion */}
             <section>
-              <h2 className="text-2xl font-semibold text-[#FAFAFA]">
+              <h2 className="text-2xl font-semibold text-[#1C1C1C]">
                 The Bottom Line
               </h2>
               <p className="mt-4">
                 So, is ceramic coating worth it? For most car owners who want
-                genuine, long-term paint protection with less maintenance, the
-                answer is yes. It is not a miracle product, and it does require
-                realistic expectations, but when professionally applied, a
-                quality ceramic coating delivers measurable benefits that wax
-                and sealant simply cannot match over the same time frame.
+                real, long-term paint protection without the constant
+                maintenance of waxing and sealing, yes. It is not a miracle
+                product and you need to have realistic expectations, but when
+                it&rsquo;s professionally applied, it delivers benefits that
+                wax and sealant simply cannot match over the same time period.
               </p>
               <p className="mt-4">
-                If you are in the Overland Park area and considering ceramic
-                coating for your vehicle, our team at{" "}
+                If you&rsquo;re in the Overland Park area and thinking about
+                ceramic coating, our team at{" "}
                 <Link
                   href="/services/ceramic-coating"
-                  className="text-[#C9A84C] underline underline-offset-2 transition-colors hover:text-[#b8973f]"
+                  className="text-[#1E5FAE] underline underline-offset-2 transition-colors hover:text-[#174a8a]"
                 >
                   {BUSINESS.shortName}
                 </Link>{" "}
-                can walk you through the process, assess your paint&rsquo;s
-                condition, and recommend the right level of protection for your
-                needs and budget.
+                can walk you through the process, take a look at your
+                paint&rsquo;s condition, and help you figure out the right
+                level of protection for your needs and budget.
               </p>
             </section>
           </div>
 
           {/* ---- Related Articles ---- */}
-          <aside className="mt-16 border-t border-white/10 pt-12">
-            <h2 className="text-xl font-semibold text-[#FAFAFA]">
+          <aside className="mt-16 border-t border-gray-200 pt-12">
+            <h2 className="text-xl font-semibold text-[#1C1C1C]">
               Related Articles
             </h2>
             <div className="mt-6">
               <Link
                 href="/blog/how-often-should-you-detail-your-car"
-                className="group block rounded-xl border border-white/10 bg-[#1A1A1A] p-6 transition-all hover:border-[#C9A84C]/30"
+                className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:shadow-md"
               >
-                <span className="text-sm text-[#FAFAFA]/50">Car Care Tips</span>
-                <h3 className="mt-2 text-lg font-semibold text-[#FAFAFA] transition-colors group-hover:text-[#C9A84C]">
+                <span className="text-sm text-[#4A4A4A]">Car Care Tips</span>
+                <h3 className="mt-2 text-lg font-semibold text-[#1C1C1C] transition-colors group-hover:text-[#1E5FAE]">
                   How Often Should You Detail Your Car?
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#FAFAFA]/60">
-                  Find out the ideal detailing schedule for your vehicle based on
-                  how you drive, where you park, and the results you want to
-                  maintain.
+                <p className="mt-2 text-sm leading-relaxed text-[#4A4A4A]">
+                  Find out the right detailing schedule for your vehicle based
+                  on how you drive, where you park, and the results you want to
+                  keep up.
                 </p>
-                <span className="mt-4 inline-block text-sm font-medium text-[#C9A84C] transition-colors group-hover:text-[#b8973f]">
+                <span className="mt-4 inline-block text-sm font-medium text-[#1E5FAE] transition-colors group-hover:text-[#174a8a]">
                   Read Article &rarr;
                 </span>
               </Link>
@@ -452,9 +473,9 @@ export default function CeramicCoatingWorthItPage() {
       </article>
 
       <CTASection
-        headline="Ready to Protect Your Paint?"
-        description="Book a professional ceramic coating application with LuxeRide and give your vehicle the long-lasting protection it deserves."
-        buttonText="Get a Ceramic Coating Quote"
+        headline="Thinking About Ceramic Coating?"
+        description="We'll take a look at your paint, answer your questions, and help you decide if ceramic coating is the right move for your car."
+        buttonText="Get a Free Quote"
         buttonHref="/contact"
       />
     </>

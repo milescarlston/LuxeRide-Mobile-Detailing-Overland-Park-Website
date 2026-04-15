@@ -1,7 +1,7 @@
 export const BUSINESS = {
   name: "LuxeRide Mobile Car Detailing",
   shortName: "LuxeRide",
-  tagline: "Premium Mobile Detailing — We Come to You",
+  tagline: "We Come to You. Professional Results, Zero Hassle.",
   phone: "(913) 555-0147",
   phoneHref: "tel:+19135550147",
   email: "hello@luxeridemobile.com",
@@ -14,7 +14,7 @@ export const BUSINESS = {
     country: "US",
   },
   geo: { lat: 38.9822, lng: -94.6708 },
-  hours: "Monday–Saturday 7:00 AM – 7:00 PM, Sunday by appointment",
+  hours: "Mon-Sat 7:00 AM - 7:00 PM, Sunday by appointment",
   openingHours: [
     "Mo-Sa 07:00-19:00",
   ],
@@ -57,7 +57,7 @@ export const SERVICES: Service[] = [
     title: "Exterior Wash & Detail",
     shortTitle: "Exterior Detail",
     description:
-      "A thorough hand wash, clay bar treatment, polish, and protective sealant to restore your vehicle's showroom shine.",
+      "We'll get your car looking brand new with a thorough hand wash, clay bar treatment, polish, and protective sealant. The works, right in your driveway.",
     startingPrice: 75,
     targetKeyword: "exterior car detailing Overland Park",
     icon: "sparkles",
@@ -76,7 +76,7 @@ export const SERVICES: Service[] = [
     title: "Interior Detail",
     shortTitle: "Interior Detail",
     description:
-      "Deep cleaning of every interior surface — vacuuming, steam cleaning, leather conditioning, and odor elimination for a fresh cabin.",
+      "Deep cleaning for every surface inside your car. We vacuum, steam clean, condition the leather, and get rid of any odors. Your car will smell and feel like new.",
     startingPrice: 99,
     targetKeyword: "interior car detailing Overland Park",
     icon: "car-seat",
@@ -95,7 +95,7 @@ export const SERVICES: Service[] = [
     title: "Full Detail Package",
     shortTitle: "Full Detail",
     description:
-      "The complete package — our exterior and interior detail combined for a bumper-to-bumper transformation your vehicle deserves.",
+      "The whole thing, inside and out. Our most popular package combines the full exterior and interior detail for a complete bumper-to-bumper transformation.",
     startingPrice: 149,
     targetKeyword: "full car detail Overland Park",
     icon: "shield-check",
@@ -114,37 +114,18 @@ export const SERVICES: Service[] = [
     title: "Ceramic Coating",
     shortTitle: "Ceramic Coating",
     description:
-      "Long-lasting nano-ceramic protection that repels water, resists UV damage, and keeps your paint looking flawless for years.",
+      "A protective ceramic layer that lasts for years. It keeps your paint looking fresh, makes washing way easier, and protects against UV damage, bird droppings, and road grime.",
     startingPrice: 499,
     targetKeyword: "ceramic coating Overland Park",
     icon: "droplet",
     features: [
       "Paint decontamination",
-      "Single-stage paint correction",
+      "Single-stage polish",
       "SiO2 ceramic coating application",
       "Hydrophobic finish",
       "UV protection",
-      "2–5 year durability",
+      "2-5 year durability",
       "Aftercare kit included",
-    ],
-  },
-  {
-    slug: "paint-correction",
-    title: "Paint Correction",
-    shortTitle: "Paint Correction",
-    description:
-      "Multi-stage machine polishing to remove swirl marks, scratches, and oxidation — revealing the true depth and clarity of your paint.",
-    startingPrice: 299,
-    targetKeyword: "paint correction Kansas City",
-    icon: "wand",
-    features: [
-      "Paint inspection & assessment",
-      "Clay bar decontamination",
-      "Multi-stage machine polishing",
-      "Swirl mark removal",
-      "Scratch removal",
-      "Paint depth gauge measurement",
-      "Protective sealant application",
     ],
   },
   {
@@ -152,7 +133,7 @@ export const SERVICES: Service[] = [
     title: "Headlight Restoration",
     shortTitle: "Headlight Restoration",
     description:
-      "Professional wet-sanding and polishing to remove oxidation and haze, restoring crystal-clear headlights for safer nighttime driving.",
+      "Cloudy, yellowed headlights are a safety hazard and make your car look old. We sand, polish, and seal them so they're crystal clear again.",
     startingPrice: 59,
     targetKeyword: "headlight restoration Overland Park",
     icon: "lightbulb",
@@ -173,37 +154,87 @@ export const TESTIMONIALS = [
     vehicle: "2023 BMW X5",
     rating: 5,
     quote:
-      "LuxeRide came to my office and had my X5 looking brand new by the time I got off work. The convenience alone is worth it, but the quality blew me away.",
+      "LuxeRide came to my office and had my X5 looking brand new by the time I got off work. So convenient, and the quality was way better than I expected.",
   },
   {
     name: "Sarah M.",
     vehicle: "2022 Tesla Model Y",
     rating: 5,
     quote:
-      "I've tried three different detailers in Overland Park and LuxeRide is hands-down the best. The ceramic coating they applied still beads water beautifully after six months.",
+      "I've tried three different detailers in Overland Park and LuxeRide is hands-down the best. The ceramic coating still beads water perfectly after six months.",
   },
   {
     name: "Marcus T.",
     vehicle: "2021 Ford F-150",
     rating: 5,
     quote:
-      "My truck had seen better days after a year of hauling. The full detail package brought it back to life. Even the bed looks spotless. Highly recommend.",
+      "My truck had seen better days after a year of hauling. The full detail brought it back to life. Even the bed looks spotless. Would definitely recommend.",
   },
   {
     name: "Jennifer L.",
     vehicle: "2024 Lexus RX",
     rating: 5,
     quote:
-      "Professional, punctual, and the results speak for themselves. My Lexus has never looked this good — not even when I drove it off the lot.",
+      "On time, professional, and the results speak for themselves. My Lexus has never looked this good. Not even when I drove it off the lot.",
   },
   {
     name: "Robert K.",
     vehicle: "2020 Porsche 911",
     rating: 5,
     quote:
-      "I'm very particular about who touches my 911. After seeing LuxeRide's paint correction work, I won't trust anyone else. Absolutely flawless.",
+      "I'm picky about who touches my car. After seeing LuxeRide's work, I won't go anywhere else. Seriously impressed with the attention to detail.",
   },
 ] as const;
+
+export interface PricingPlan {
+  name: string;
+  price: string;
+  priceNote?: string;
+  popular?: boolean;
+  features: string[];
+}
+
+export const PRICING_PLANS: PricingPlan[] = [
+  {
+    name: "Basic Detail",
+    price: "$150",
+    features: [
+      "Complete Interior Wipe Down",
+      "Triple-Stage Vacuuming",
+      "Mat Cleaning & Refresh",
+    ],
+  },
+  {
+    name: "Premium Detail",
+    price: "$200",
+    popular: true,
+    features: [
+      "Triple-Stage Vacuuming",
+      "Seat & Carpet Stain Removal",
+      "Interior Cabin Freshener",
+      "Full Dust Removal",
+      "Window Cleaning & Treatment",
+      "Deep Steam Cleaning",
+      "Fabric & Carpet Extraction",
+      "Complete Interior Shampoo",
+      "Leather Conditioning & Care",
+      "UV-Protectant Plastic Coating",
+    ],
+  },
+  {
+    name: "Exterior Wash",
+    price: "+$50",
+    priceNote: "Add to any detail",
+    features: [
+      "Hand Wash Exterior",
+      "Rim Detailing",
+      "Tire Deep Clean",
+      "Tire Shine Application",
+      "Door Jamb & Panel Cleaning",
+      "Spot-Free Hand Dry",
+    ],
+  },
+];
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },

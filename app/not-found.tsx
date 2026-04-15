@@ -3,40 +3,40 @@ import { SERVICES } from "@/lib/constants";
 
 export default function NotFound() {
   return (
-    <section className="flex flex-1 flex-col items-center justify-center bg-[#0A0A0A] px-4 py-24 text-center">
-      <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A84C]">
-        404 — Page Not Found
+    <section className="flex flex-1 flex-col items-center justify-center bg-white px-4 py-24 text-center">
+      <p className="text-sm font-semibold uppercase tracking-widest text-[#1E5FAE]">
+        404 - Page Not Found
       </p>
-      <h1 className="mt-4 font-[family-name:var(--font-playfair-display)] text-4xl font-bold tracking-tight text-[#FAFAFA] sm:text-5xl">
+      <h1 className="mt-4 text-3xl font-bold tracking-tight text-[#1C1C1C] sm:text-4xl">
         Looks Like You Took a Wrong Turn
       </h1>
-      <p className="mt-4 max-w-md text-lg text-[#FAFAFA]/60">
+      <p className="mt-3 max-w-md text-base text-[#4A4A4A]">
         The page you&apos;re looking for doesn&apos;t exist or has been moved. Let us
         help you find your way back.
       </p>
-      <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+      <div className="mt-6 flex flex-col gap-3 sm:flex-row">
         <Link
           href="/"
-          className="inline-flex items-center justify-center rounded-md bg-[#C9A84C] px-8 py-3 text-sm font-semibold text-[#0A0A0A] transition-colors hover:bg-[#b8973f]"
+          className="inline-flex items-center justify-center rounded-lg bg-[#10B981] px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#059669]"
         >
           Go Home
         </Link>
         <Link
           href="/contact"
-          className="inline-flex items-center justify-center rounded-md border border-white/20 px-8 py-3 text-sm font-semibold text-[#FAFAFA] transition-colors hover:border-[#C9A84C] hover:text-[#C9A84C]"
+          className="inline-flex items-center justify-center rounded-lg border border-gray-300 px-7 py-3 text-sm font-semibold text-[#1C1C1C] transition-colors hover:border-[#1E5FAE] hover:text-[#1E5FAE]"
         >
           Contact Us
         </Link>
       </div>
 
-      <div className="mt-16 w-full max-w-2xl">
-        <h2 className="text-sm font-semibold uppercase tracking-wider text-[#FAFAFA]/40">
+      <div className="mt-14 w-full max-w-2xl">
+        <h2 className="text-sm font-semibold uppercase tracking-wider text-[#4A4A4A]">
           Popular Pages
         </h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           <Link
             href="/services"
-            className="rounded-lg border border-white/10 bg-[#1A1A1A] px-4 py-3 text-left text-sm text-[#FAFAFA]/70 transition-colors hover:border-[#C9A84C]/30 hover:text-[#C9A84C]"
+            className="rounded-lg border border-gray-200 bg-white px-4 py-3 text-left text-sm text-[#4A4A4A] shadow-sm transition-colors hover:border-[#1E5FAE] hover:text-[#1E5FAE]"
           >
             Our Services
           </Link>
@@ -44,20 +44,20 @@ export default function NotFound() {
             <Link
               key={s.slug}
               href={`/services/${s.slug}`}
-              className="rounded-lg border border-white/10 bg-[#1A1A1A] px-4 py-3 text-left text-sm text-[#FAFAFA]/70 transition-colors hover:border-[#C9A84C]/30 hover:text-[#C9A84C]"
+              className="rounded-lg border border-gray-200 bg-white px-4 py-3 text-left text-sm text-[#4A4A4A] shadow-sm transition-colors hover:border-[#1E5FAE] hover:text-[#1E5FAE]"
             >
               {s.shortTitle}
             </Link>
           ))}
           <Link
             href="/gallery"
-            className="rounded-lg border border-white/10 bg-[#1A1A1A] px-4 py-3 text-left text-sm text-[#FAFAFA]/70 transition-colors hover:border-[#C9A84C]/30 hover:text-[#C9A84C]"
+            className="rounded-lg border border-gray-200 bg-white px-4 py-3 text-left text-sm text-[#4A4A4A] shadow-sm transition-colors hover:border-[#1E5FAE] hover:text-[#1E5FAE]"
           >
             Gallery
           </Link>
           <Link
             href="/blog"
-            className="rounded-lg border border-white/10 bg-[#1A1A1A] px-4 py-3 text-left text-sm text-[#FAFAFA]/70 transition-colors hover:border-[#C9A84C]/30 hover:text-[#C9A84C]"
+            className="rounded-lg border border-gray-200 bg-white px-4 py-3 text-left text-sm text-[#4A4A4A] shadow-sm transition-colors hover:border-[#1E5FAE] hover:text-[#1E5FAE]"
           >
             Blog
           </Link>

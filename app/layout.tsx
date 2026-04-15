@@ -1,43 +1,36 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Sans, Playfair_Display } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { organizationSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
 import "./globals.css";
 
-const dmSans = DM_Sans({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-dm-sans",
-  display: "swap",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair-display",
+  variable: "--font-plus-jakarta-sans",
   display: "swap",
 });
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0A0A0A",
+  themeColor: "#FFFFFF",
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(BUSINESS.url),
   title: {
-    default: `${BUSINESS.name} | Premium Mobile Detailing in Overland Park, KS`,
+    default: `${BUSINESS.name} | Mobile Detailing in Overland Park, KS`,
     template: `%s | ${BUSINESS.name} Overland Park`,
   },
   description:
-    "Premium mobile car detailing in Overland Park, KS. We come to you with professional exterior & interior detailing, ceramic coating, and paint correction. Book today!",
+    "Professional mobile car detailing in Overland Park, KS. We come to your home or office with exterior & interior detailing, ceramic coating, and more. Book today!",
   keywords: [
     "mobile car detailing Overland Park",
     "auto detailing Overland Park KS",
     "car detailing near me",
     "ceramic coating Overland Park",
-    "paint correction Kansas City",
     "mobile detailing Kansas City",
   ],
   authors: [{ name: BUSINESS.name }],
@@ -47,23 +40,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: BUSINESS.url,
     siteName: BUSINESS.name,
-    title: `${BUSINESS.name} | Premium Mobile Detailing in Overland Park, KS`,
+    title: `${BUSINESS.name} | Mobile Detailing in Overland Park, KS`,
     description:
-      "Premium mobile car detailing in Overland Park, KS. We come to you with professional detailing, ceramic coating, and paint correction.",
+      "Professional mobile car detailing in Overland Park, KS. We come to you with exterior & interior detailing, ceramic coating, and more.",
     images: [
       {
         url: "/images/og-default.jpg",
         width: 1200,
         height: 630,
-        alt: `${BUSINESS.name} - Premium Mobile Car Detailing`,
+        alt: `${BUSINESS.name} - Mobile Car Detailing`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${BUSINESS.name} | Premium Mobile Detailing in Overland Park, KS`,
+    title: `${BUSINESS.name} | Mobile Detailing in Overland Park, KS`,
     description:
-      "Premium mobile car detailing in Overland Park, KS. We come to you with professional detailing, ceramic coating, and paint correction.",
+      "Professional mobile car detailing in Overland Park, KS. We come to you with exterior & interior detailing, ceramic coating, and more.",
     images: ["/images/og-default.jpg"],
   },
   robots: {
@@ -86,7 +79,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${playfair.variable}`}>
+    <html lang="en" className={jakarta.variable}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

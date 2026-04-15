@@ -25,28 +25,28 @@ const faqs = [
   {
     question: "Why do headlights turn yellow or cloudy over time?",
     answer:
-      "Modern headlight lenses are made from polycarbonate plastic. Over time, exposure to UV radiation from the sun breaks down the factory clear coat, causing the plastic to oxidize. This oxidation creates a yellow, hazy, or cloudy appearance. Road debris, chemicals, and environmental pollutants also accelerate the deterioration.",
+      "Modern headlight lenses are made from polycarbonate plastic. Over time, UV rays from the sun break down the factory clear coat, and the plastic starts to oxidize. That is what causes the yellow, hazy, cloudy look. Road debris, chemicals, and weather speed it up too. Kansas summers are especially tough on headlights because of the intense sun and temperature swings.",
   },
   {
     question: "How long does a professional headlight restoration last?",
     answer:
-      "With our multi-stage wet-sanding, polishing, and UV-resistant clear coat application, results typically last two to three years. The UV clear coat is the key to long-term durability — it acts as a fresh protective barrier that shields the polycarbonate from further sun damage.",
+      "With our wet-sanding, polishing, and UV-resistant clear coat process, you can expect results to last two to three years. The clear coat is the key. It acts as a fresh protective layer that shields the plastic from further sun damage, so the haze does not come back right away like it does with cheap DIY kits.",
   },
   {
     question:
       "Is headlight restoration cheaper than replacing the headlight assembly?",
     answer:
-      "Absolutely. A new OEM headlight assembly can cost anywhere from $200 to over $1,000 per side, depending on your vehicle. Our professional headlight restoration starts at just $59 for both headlights, delivering results that look like new at a fraction of the replacement cost.",
+      "Way cheaper. A new OEM headlight assembly runs anywhere from $200 to over $1,000 per side, depending on your vehicle. Some cars with LED or adaptive headlights cost even more. Our restoration starts at just $59 for both headlights and gets them looking like new. That is a no-brainer for most people.",
   },
   {
     question: "Does headlight restoration improve safety?",
     answer:
-      "Yes. Oxidized headlights can reduce light output by up to 80 percent, severely compromising your ability to see the road at night. Restoring clarity allows your headlight bulbs to project their full beam pattern, improving nighttime visibility and making your vehicle more visible to other drivers.",
+      "Absolutely. Oxidized headlights can cut your light output by up to 80 percent. That means you are basically driving half-blind at night. Restoring the clarity lets your bulbs project their full beam pattern, so you can actually see the road and other drivers can see you. It makes a huge difference, especially on darker roads around Overland Park.",
   },
   {
     question: "Can you restore headlights that are severely yellowed or hazed?",
     answer:
-      "In most cases, yes. Our multi-stage wet-sanding process uses progressively finer grits to remove even heavy oxidation and surface damage. As long as the haze is on the outer surface of the lens and the plastic is not cracked or damaged internally, we can restore them to near-original clarity.",
+      "In most cases, yes. Our multi-stage wet-sanding process uses progressively finer grits to remove even heavy oxidation and surface damage. As long as the haze is on the outer surface of the lens and the plastic is not cracked or damaged on the inside, we can bring them back to near-original clarity.",
   },
 ];
 
@@ -78,107 +78,111 @@ export default function HeadlightRestorationPage() {
       />
 
       {/* Hero / Intro */}
-      <section className="bg-[#0A0A0A] py-16 sm:py-24">
+      <section className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="font-[family-name:var(--font-playfair-display)] text-3xl font-bold tracking-tight text-[#FAFAFA] sm:text-4xl lg:text-5xl">
-              Headlight Restoration in Overland Park, KS
+            <h1 className="text-3xl font-bold tracking-tight text-[#1C1C1C] sm:text-4xl lg:text-5xl">
+              Headlight Restoration in{" "}
+              <span className="text-[#1E5FAE]">Overland Park, KS</span>
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#FAFAFA]/70">
-              Cloudy, yellowed headlights do more than hurt your vehicle&rsquo;s
-              appearance &mdash; they compromise your safety every time you drive
-              after dark. LuxeRide&rsquo;s professional headlight restoration
-              service in Overland Park brings your lenses back to crystal-clear
-              condition so you can see the road and be seen by other drivers.
+            <p className="mt-6 text-lg leading-relaxed text-[#4A4A4A]">
+              You know those yellow, foggy headlights that make your car look ten
+              years older than it is? We fix that. Our headlight restoration
+              service brings your lenses back to crystal-clear condition so your
+              car looks great and you can actually see the road at night.
             </p>
+            <div className="mt-8">
+              <Link
+                href="/contact"
+                className="inline-block rounded-md bg-[#10B981] px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#059669]"
+              >
+                Get a Free Quote
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Why Headlights Oxidize */}
-      <section className="border-t border-white/10 bg-[#0A0A0A] py-16 sm:py-20">
+      {/* Why Headlights Oxidize + Our Process */}
+      <section className="bg-[#F7F7F5] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
-              <h2 className="text-2xl font-bold tracking-tight text-[#FAFAFA] sm:text-3xl">
-                Why Do Headlights Turn Yellow and Cloudy?
+              <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
+                Why Do Headlights Get Foggy?
               </h2>
-              <p className="mt-4 leading-relaxed text-[#FAFAFA]/70">
-                Nearly every vehicle manufactured today uses polycarbonate
-                plastic for its headlight lenses. While polycarbonate is
-                lightweight and impact-resistant, it is highly susceptible to UV
-                degradation. The factory applies a thin clear coat to protect the
-                plastic, but years of sun exposure, road salt, and chemical
-                contact gradually break that barrier down.
+              <p className="mt-4 leading-relaxed text-[#4A4A4A]">
+                Almost every car made today uses polycarbonate plastic for the
+                headlight lenses. It is lightweight and tough, but the sun beats
+                it up over time. The factory puts a thin clear coat on the
+                outside to protect it, but after a few years of Kansas heat and
+                UV exposure, that clear coat wears away.
               </p>
-              <p className="mt-4 leading-relaxed text-[#FAFAFA]/70">
-                Once the clear coat fails, the bare polycarbonate begins to
-                oxidize. The result is the familiar yellow, hazy film that dims
-                your headlights and makes your vehicle look older than it is.
-                Kansas summers are particularly harsh &mdash; the combination of
-                intense UV exposure and temperature swings accelerates oxidation
-                faster than in milder climates.
+              <p className="mt-4 leading-relaxed text-[#4A4A4A]">
+                Once the clear coat is gone, the bare plastic starts to oxidize.
+                That is the yellow, hazy film you see. It gets worse every year
+                and it is not just cosmetic. It blocks a huge amount of light
+                from getting through. The Overland Park sun and our hot summers
+                make this happen faster than you might expect.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold tracking-tight text-[#FAFAFA] sm:text-3xl">
-                Our Wet-Sanding &amp; Polishing Process
+              <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
+                How We Fix It
               </h2>
-              <p className="mt-4 leading-relaxed text-[#FAFAFA]/70">
-                DIY headlight kits offer a temporary fix, but they rarely
-                include the multi-stage sanding and professional-grade UV
-                protection that deliver lasting results. Our technicians follow a
-                proven, multi-step process:
+              <p className="mt-4 leading-relaxed text-[#4A4A4A]">
+                Those cheap DIY kits from the auto parts store? They work for
+                about a month. We do it right with a multi-step process that
+                actually lasts.
               </p>
-              <ol className="mt-4 space-y-3 text-[#FAFAFA]/70">
+              <ol className="mt-6 space-y-4">
                 <li className="flex gap-3">
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#C9A84C]/10 text-xs font-bold text-[#C9A84C]">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#1E5FAE]/10 text-xs font-bold text-[#1E5FAE]">
                     1
                   </span>
-                  <span>
-                    <strong className="text-[#FAFAFA]">
-                      Surface preparation
+                  <span className="text-[#4A4A4A]">
+                    <strong className="text-[#1C1C1C]">
+                      Mask and prep
                     </strong>{" "}
-                    &mdash; the surrounding paint and trim are carefully masked
-                    to prevent damage during sanding.
+                    - We tape off the surrounding paint and trim so nothing gets
+                    scratched during sanding.
                   </span>
                 </li>
                 <li className="flex gap-3">
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#C9A84C]/10 text-xs font-bold text-[#C9A84C]">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#1E5FAE]/10 text-xs font-bold text-[#1E5FAE]">
                     2
                   </span>
-                  <span>
-                    <strong className="text-[#FAFAFA]">
-                      Multi-stage wet sanding
+                  <span className="text-[#4A4A4A]">
+                    <strong className="text-[#1C1C1C]">
+                      Wet sanding
                     </strong>{" "}
-                    &mdash; progressively finer grits (800 through 3000)
-                    remove the oxidized layer without compromising the lens
-                    structure.
+                    - We go through multiple grits (800 up to 3000) to strip away
+                    the oxidized layer without damaging the lens.
                   </span>
                 </li>
                 <li className="flex gap-3">
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#C9A84C]/10 text-xs font-bold text-[#C9A84C]">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#1E5FAE]/10 text-xs font-bold text-[#1E5FAE]">
                     3
                   </span>
-                  <span>
-                    <strong className="text-[#FAFAFA]">
-                      Machine polishing
+                  <span className="text-[#4A4A4A]">
+                    <strong className="text-[#1C1C1C]">
+                      Machine polish
                     </strong>{" "}
-                    &mdash; a finishing compound restores optical clarity and
-                    eliminates micro-scratches left by sanding.
+                    - A finishing compound brings back the optical clarity and
+                    removes any fine scratches from sanding.
                   </span>
                 </li>
                 <li className="flex gap-3">
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#C9A84C]/10 text-xs font-bold text-[#C9A84C]">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#1E5FAE]/10 text-xs font-bold text-[#1E5FAE]">
                     4
                   </span>
-                  <span>
-                    <strong className="text-[#FAFAFA]">
-                      UV-resistant clear coat
+                  <span className="text-[#4A4A4A]">
+                    <strong className="text-[#1C1C1C]">
+                      UV clear coat
                     </strong>{" "}
-                    &mdash; a professional-grade UV sealant is applied to
-                    protect the freshly polished surface for years to come.
+                    - We seal it with a professional-grade UV coating that
+                    protects the lens for years, not weeks.
                   </span>
                 </li>
               </ol>
@@ -188,59 +192,59 @@ export default function HeadlightRestorationPage() {
       </section>
 
       {/* Safety + Cost Benefits */}
-      <section className="border-t border-white/10 bg-[#0A0A0A] py-16 sm:py-20">
+      <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
-              <h2 className="text-2xl font-bold tracking-tight text-[#FAFAFA] sm:text-3xl">
-                Safety Benefits of Clear Headlights
+              <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
+                Driving at Night Shouldn&rsquo;t Feel Sketchy
               </h2>
-              <p className="mt-4 leading-relaxed text-[#FAFAFA]/70">
-                Oxidized headlights drastically reduce the amount of light that
-                reaches the road. Studies show that severely hazed lenses can cut
-                light output by up to 80 percent, turning a well-lit highway
-                into a dimly lit obstacle course. Restoring your headlights
-                improves your forward visibility and ensures oncoming drivers can
-                see your vehicle sooner &mdash; a critical factor in preventing
-                accidents on Overland Park roads and I-435 corridors.
+              <p className="mt-4 leading-relaxed text-[#4A4A4A]">
+                Oxidized headlights can cut your light output by up to 80
+                percent. That is a massive difference. You are basically driving
+                with a dim flashlight instead of real headlights. It makes it
+                harder to see the road, harder for other drivers to see you, and
+                a lot more dangerous on Overland Park roads and the I-435
+                corridor at night.
               </p>
-              <p className="mt-4 leading-relaxed text-[#FAFAFA]/70">
-                Clear headlights can also help your vehicle pass state safety
-                inspections and avoid citations for inadequate lighting
-                equipment.
+              <p className="mt-4 leading-relaxed text-[#4A4A4A]">
+                After a restoration, the difference is night and day (literally).
+                Your bulbs can finally project their full beam pattern again.
+                Clear headlights can also help you avoid issues during safety
+                inspections.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold tracking-tight text-[#FAFAFA] sm:text-3xl">
-                Restoration vs. Replacement: Save Hundreds
+              <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
+                Way Cheaper Than New Headlights
               </h2>
-              <p className="mt-4 leading-relaxed text-[#FAFAFA]/70">
-                Replacing a single headlight assembly at a dealership typically
-                costs $250 to $1,000 or more, depending on whether your vehicle
-                uses LED or adaptive lighting. For both sides, you could be
+              <p className="mt-4 leading-relaxed text-[#4A4A4A]">
+                Replacing a single headlight assembly at a dealership usually
+                costs $250 to $1,000 or more. If your car has LED or adaptive
+                headlights, it can be even worse. For both sides you could be
                 looking at well over $1,500.
               </p>
-              <p className="mt-4 leading-relaxed text-[#FAFAFA]/70">
-                Professional headlight restoration achieves comparable visual
-                clarity for a fraction of the price. Our service starts at just{" "}
-                <strong className="text-[#C9A84C]">$59</strong> and includes
-                both headlights &mdash; making it one of the smartest
-                maintenance investments you can make. Pair it with an{" "}
+              <p className="mt-4 leading-relaxed text-[#4A4A4A]">
+                Our headlight restoration gets you the same clear result for a
+                fraction of the price. We start at just{" "}
+                <strong className="text-[#1E5FAE]">$59 for both
+                headlights</strong>. That is one of the best deals in auto care.
+                Pair it with an{" "}
                 <Link
                   href="/services/exterior-detail"
-                  className="text-[#C9A84C] underline underline-offset-4 transition-colors hover:text-[#b8973f]"
+                  className="text-[#1E5FAE] underline underline-offset-4 transition-colors hover:text-[#174d8e]"
                 >
                   exterior detail
                 </Link>{" "}
                 or{" "}
                 <Link
                   href="/services/full-detail"
-                  className="text-[#C9A84C] underline underline-offset-4 transition-colors hover:text-[#b8973f]"
+                  className="text-[#1E5FAE] underline underline-offset-4 transition-colors hover:text-[#174d8e]"
                 >
                   full detail package
                 </Link>{" "}
-                for a complete vehicle transformation.
+                and your car will look like it just rolled off the lot.
               </p>
             </div>
           </div>
@@ -248,19 +252,19 @@ export default function HeadlightRestorationPage() {
       </section>
 
       {/* What's Included + Pricing */}
-      <section className="border-t border-white/10 bg-[#0A0A0A] py-16 sm:py-20">
+      <section className="bg-[#F7F7F5] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             {/* What's Included */}
             <div>
-              <h2 className="text-2xl font-bold tracking-tight text-[#FAFAFA] sm:text-3xl">
+              <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
                 What&rsquo;s Included
               </h2>
               <ul className="mt-6 space-y-3">
                 {service.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
                     <svg
-                      className="mt-0.5 h-5 w-5 shrink-0 text-[#C9A84C]"
+                      className="mt-0.5 h-5 w-5 shrink-0 text-[#10B981]"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -272,7 +276,7 @@ export default function HeadlightRestorationPage() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span className="text-[#FAFAFA]/70">{feature}</span>
+                    <span className="text-[#4A4A4A]">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -280,19 +284,19 @@ export default function HeadlightRestorationPage() {
 
             {/* Pricing Callout */}
             <div className="flex items-start">
-              <div className="w-full rounded-xl border border-white/10 bg-[#1A1A1A] p-8 text-center">
-                <p className="text-sm font-medium uppercase tracking-widest text-[#C9A84C]">
+              <div className="w-full rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm">
+                <p className="text-sm font-medium uppercase tracking-widest text-[#1E5FAE]">
                   Both Headlights
                 </p>
-                <p className="mt-3 text-4xl font-bold tracking-tight text-[#FAFAFA] sm:text-5xl">
+                <p className="mt-3 text-4xl font-bold tracking-tight text-[#1C1C1C] sm:text-5xl">
                   Starting at $59
                 </p>
-                <p className="mt-3 text-[#FAFAFA]/50">
+                <p className="mt-3 text-[#4A4A4A]">
                   Price may vary by vehicle size and severity of oxidation.
                 </p>
                 <Link
                   href="/contact"
-                  className="mt-6 inline-block rounded-md bg-[#C9A84C] px-8 py-3.5 text-base font-semibold text-[#0A0A0A] transition-colors hover:bg-[#b8973f]"
+                  className="mt-6 inline-block rounded-md bg-[#10B981] px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#059669]"
                 >
                   Book Your Restoration
                 </Link>
@@ -303,9 +307,9 @@ export default function HeadlightRestorationPage() {
       </section>
 
       {/* FAQs */}
-      <section className="border-t border-white/10 bg-[#0A0A0A] py-16 sm:py-20">
+      <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-[#FAFAFA] sm:text-3xl">
+          <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
             Headlight Restoration FAQs
           </h2>
           <div className="mt-8 max-w-3xl">
@@ -316,8 +320,8 @@ export default function HeadlightRestorationPage() {
 
       {/* CTA */}
       <CTASection
-        headline="See the Road Clearly Again"
-        description="Book your headlight restoration today and experience the difference crystal-clear lenses make for safety and appearance."
+        headline="Ready to See the Road Again?"
+        description="Stop squinting through foggy headlights. Book your restoration today and we will come to you."
         buttonText="Schedule Headlight Restoration"
       />
     </>

@@ -6,12 +6,12 @@ import { BUSINESS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Car Detailing Tips & Guides",
   description:
-    "Expert car detailing tips, guides, and insights from LuxeRide Mobile Detailing in Overland Park, KS. Learn how to keep your vehicle looking its best.",
+    "Practical car detailing tips and guides from LuxeRide Mobile Detailing in Overland Park, KS. Learn how to keep your car looking its best between details.",
   alternates: { canonical: "/blog" },
   openGraph: {
     title: `Blog | ${BUSINESS.name}`,
     description:
-      "Expert car detailing tips, guides, and insights from the LuxeRide team.",
+      "Practical car detailing tips and guides from the LuxeRide team.",
     url: "/blog",
   },
 };
@@ -21,7 +21,7 @@ const posts = [
     slug: "how-often-should-you-detail-your-car",
     title: "How Often Should You Detail Your Car?",
     excerpt:
-      "Find out the ideal detailing schedule for your vehicle based on how you drive, where you park, and the results you want to maintain.",
+      "The short answer: every 4-6 months for most people. But it depends on how you drive, where you park, and what you care about. Here's a breakdown.",
     date: "2024-12-15",
     readingTime: "6 min read",
     author: "LuxeRide Team",
@@ -29,9 +29,9 @@ const posts = [
   },
   {
     slug: "ceramic-coating-worth-it",
-    title: "Is Ceramic Coating Worth It? A Detailed Breakdown",
+    title: "Is Ceramic Coating Worth It? An Honest Breakdown",
     excerpt:
-      "We break down the cost, benefits, longevity, and real-world performance of ceramic coating so you can decide if it's right for your vehicle.",
+      "We break down the cost, the real benefits, what it won't do, and how long it actually lasts so you can decide if ceramic coating makes sense for your car.",
     date: "2024-11-28",
     readingTime: "7 min read",
     author: "LuxeRide Team",
@@ -44,29 +44,28 @@ export default function BlogPage() {
     <>
       <Breadcrumbs items={[{ name: "Blog", href: "/blog" }]} />
 
-      <section className="bg-[#0A0A0A] py-16 sm:py-24">
+      <section className="bg-white py-14 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="font-[family-name:var(--font-playfair-display)] text-3xl font-bold tracking-tight text-[#FAFAFA] sm:text-4xl lg:text-5xl">
+            <h1 className="text-3xl font-bold tracking-tight text-[#1C1C1C] sm:text-4xl">
               Detailing Tips &amp; Guides
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#FAFAFA]/70">
-              Practical advice, product insights, and expert knowledge from the LuxeRide
-              team to help you keep your vehicle looking its best between professional
-              details.
+            <p className="mt-4 text-lg leading-relaxed text-[#4A4A4A]">
+              Practical advice and honest answers from the LuxeRide team. We want to help
+              you keep your car looking great between professional details.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 sm:grid-cols-2">
+          <div className="mt-10 grid gap-8 sm:grid-cols-2">
             {posts.map((post) => (
               <article
                 key={post.slug}
-                className="group flex flex-col overflow-hidden rounded-xl border border-white/10 bg-[#1A1A1A] transition-all hover:border-[#C9A84C]/30"
+                className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:border-[#1E5FAE]/30 hover:shadow-md"
               >
                 {/* Image placeholder */}
-                <div className="flex aspect-[16/9] items-center justify-center bg-[#2a2a2a]">
+                <div className="flex aspect-[16/9] items-center justify-center bg-gray-100">
                   <svg
-                    className="h-10 w-10 text-[#FAFAFA]/15"
+                    className="h-10 w-10 text-gray-300"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -80,8 +79,8 @@ export default function BlogPage() {
                   </svg>
                 </div>
                 <div className="flex flex-1 flex-col p-6">
-                  <div className="flex items-center gap-3 text-xs text-[#FAFAFA]/50">
-                    <span className="rounded-full bg-[#C9A84C]/10 px-2.5 py-0.5 font-medium text-[#C9A84C]">
+                  <div className="flex items-center gap-3 text-xs text-[#4A4A4A]">
+                    <span className="rounded-full bg-[#1E5FAE]/10 px-2.5 py-0.5 font-medium text-[#1E5FAE]">
                       {post.category}
                     </span>
                     <time dateTime={post.date}>
@@ -93,15 +92,15 @@ export default function BlogPage() {
                     </time>
                     <span>{post.readingTime}</span>
                   </div>
-                  <h2 className="mt-3 text-lg font-semibold text-[#FAFAFA] transition-colors group-hover:text-[#C9A84C]">
+                  <h2 className="mt-3 text-lg font-semibold text-[#1C1C1C] transition-colors group-hover:text-[#1E5FAE]">
                     <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                   </h2>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-[#FAFAFA]/60">
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-[#4A4A4A]">
                     {post.excerpt}
                   </p>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="mt-4 text-sm font-medium text-[#C9A84C] transition-colors hover:text-[#b8973f]"
+                    className="mt-4 text-sm font-medium text-[#1E5FAE] transition-colors hover:text-[#164a8a]"
                   >
                     Read Article &rarr;
                   </Link>

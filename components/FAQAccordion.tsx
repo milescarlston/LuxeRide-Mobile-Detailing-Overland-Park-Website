@@ -11,7 +11,7 @@ export default function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="divide-y divide-white/10 rounded-xl border border-white/10">
+    <div className="divide-y divide-gray-200 rounded-xl border border-gray-200 bg-white">
       {faqs.map((faq, i) => (
         <div key={i}>
           <button
@@ -20,11 +20,11 @@ export default function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
             onClick={() => setOpenIndex(openIndex === i ? null : i)}
             aria-expanded={openIndex === i}
           >
-            <span className="pr-4 text-sm font-medium text-[#FAFAFA] sm:text-base">
+            <span className="pr-4 text-sm font-medium text-[#1C1C1C] sm:text-base">
               {faq.question}
             </span>
             <svg
-              className={`h-5 w-5 shrink-0 text-[#C9A84C] transition-transform ${
+              className={`h-5 w-5 shrink-0 text-[#1E5FAE] transition-transform ${
                 openIndex === i ? "rotate-180" : ""
               }`}
               fill="none"
@@ -40,7 +40,7 @@ export default function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
               openIndex === i ? "max-h-96 pb-4" : "max-h-0"
             }`}
           >
-            <p className="px-6 text-sm leading-relaxed text-[#FAFAFA]/60">{faq.answer}</p>
+            <p className="px-6 text-sm leading-relaxed text-[#4A4A4A]">{faq.answer}</p>
           </div>
         </div>
       ))}
