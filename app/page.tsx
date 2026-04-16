@@ -7,7 +7,7 @@ import HowItWorks from "@/components/HowItWorks";
 import ServiceAreaMap from "@/components/ServiceAreaMap";
 import CTASection from "@/components/CTASection";
 import { BUSINESS, SERVICES, TESTIMONIALS } from "@/lib/constants";
-import { localBusinessSchema } from "@/lib/schema";
+import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: `Mobile Car Detailing Overland Park | ${BUSINESS.name}`,
@@ -29,6 +29,12 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(localBusinessSchema()),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteSchema()),
         }}
       />
 

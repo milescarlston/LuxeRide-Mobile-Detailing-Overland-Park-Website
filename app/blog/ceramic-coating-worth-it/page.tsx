@@ -29,7 +29,7 @@ const jsonLd = articleSchema({
   slug,
   datePublished: "2024-11-28",
   dateModified: "2024-11-28",
-  author: "LuxeRide Team",
+  image: "/images/range-rover-front.png",
 });
 
 export default function CeramicCoatingWorthItPage() {

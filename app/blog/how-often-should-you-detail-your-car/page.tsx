@@ -27,7 +27,7 @@ const jsonLd = articleSchema({
   slug,
   datePublished: "2024-12-15",
   dateModified: "2024-12-15",
-  author: "LuxeRide Team",
+  image: "/images/bmw-x5-trunk-after.jpg",
 });
 
 export default function HowOftenDetailPage() {
