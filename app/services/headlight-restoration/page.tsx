@@ -37,7 +37,7 @@ const faqs = [
     question:
       "Is headlight restoration cheaper than replacing the headlight assembly?",
     answer:
-      "Way cheaper. A new OEM headlight assembly runs anywhere from $200 to over $1,000 per side, depending on your vehicle. Some cars with LED or adaptive headlights cost even more. Our restoration starts at just $75 for both headlights and gets them looking like new. That is a no-brainer for most people.",
+      "Way cheaper. A new OEM headlight assembly runs anywhere from $200 to over $1,000 per side, depending on your vehicle. Some cars with LED or adaptive headlights cost even more. Our restoration starts at just $79 for both headlights and gets them looking like new. That is a no-brainer for most people.",
   },
   {
     question: "Does headlight restoration improve safety?",
@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "How much does headlight restoration cost in Overland Park?",
     answer:
-      "Headlight restoration starts at $75 as a standalone service or starting at $55 when added to any detail package. That covers both headlights. Compared to replacing headlight assemblies, which can run $200 to over $1,000 per side, restoration is a no-brainer for most vehicles.",
+      "Headlight restoration starts at $79 as a standalone service or starting at $59 when added to any detail package. That covers both headlights. Compared to replacing headlight assemblies, which can run $200 to over $1,000 per side, restoration is a no-brainer for most vehicles.",
   },
   {
     question: "Why is headlight restoration cheaper as an add-on?",
@@ -239,7 +239,7 @@ export default function HeadlightRestorationPage() {
               <p className="mt-4 leading-relaxed text-[#4A4A4A]">
                 Our headlight restoration gets you the same clear result for a
                 fraction of the price. We start at just{" "}
-                <strong className="text-[#1E5FAE]">$75 for both
+                <strong className="text-[#1E5FAE]">$79 for both
                 headlights</strong>. That is one of the best deals in auto care.
                 Pair it with an{" "}
                 <Link

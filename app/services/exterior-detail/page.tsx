@@ -54,7 +54,7 @@ const faqs = [
   {
     question: "How much does exterior car detailing cost in Overland Park?",
     answer:
-      "Our exterior wash and detail starts at $100 for sedans and small cars, $130 for SUVs and crossovers, and $150 for trucks, vans, and large SUVs. Final price depends on your vehicle's size and condition. We always confirm pricing upfront before we start so there are no surprises.",
+      "Our exterior wash and detail starts at $125 for sedans and small cars, $159 for SUVs and crossovers, and $189 for trucks, vans, and large SUVs. Final price depends on your vehicle's size and condition. We always confirm pricing upfront before we start so there are no surprises.",
   },
   {
     question: "Why do prices vary by vehicle size?",

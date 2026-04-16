@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "How much does a full car detail cost in Overland Park?",
     answer:
-      "Our full detail starts at $225 for sedans, $285 for SUVs and crossovers, and $325 for trucks, vans, and large SUVs. That is actually $25 to $35 less than booking our interior and exterior details separately, and you get extras like engine bay cleaning and door jamb detailing included.",
+      "Our full detail starts at $275 for sedans, $339 for SUVs and crossovers, and $399 for trucks, vans, and large SUVs. That is actually $25 to $39 less than booking our interior and exterior details separately, and you get extras like engine bay cleaning and door jamb detailing included.",
   },
   {
     question: "Why do prices vary by vehicle size?",
@@ -232,7 +232,7 @@ export default function FullDetailPage() {
             </span>
           </div>
           <p className="mt-4 max-w-2xl leading-relaxed text-[#4A4A4A]">
-            Book together and save $25-$35 compared to separate interior and
+            Book together and save $25-$39 compared to separate interior and
             exterior details. Your price might be a bit higher if your car needs
             extra love — we&apos;ll always let you know upfront before we start.
           </p>

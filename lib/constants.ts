@@ -80,7 +80,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Exterior Detail",
     description:
       "We'll get your car looking brand new with a thorough hand wash, clay bar treatment, polish, and protective sealant. The works, right in your driveway.",
-    startingPrice: 100,
+    startingPrice: 125,
     targetKeyword: "exterior car detailing Overland Park",
     icon: "sparkles",
     features: [
@@ -94,14 +94,14 @@ export const SERVICES: Service[] = [
     ],
     estimatedTime: "1.5-2.5 hours",
     vehicleTiers: [
-      { label: "Sedan / Car", description: "Coupes, sedans, small hatchbacks", price: 100 },
-      { label: "SUV / Crossover", description: "Mid-size SUVs, crossovers", price: 130 },
-      { label: "Truck / Van", description: "Full-size trucks, minivans, large SUVs", price: 150 },
+      { label: "Sedan / Car", description: "Coupes, sedans, small hatchbacks", price: 125 },
+      { label: "SUV / Crossover", description: "Mid-size SUVs, crossovers", price: 159 },
+      { label: "Truck / Van", description: "Full-size trucks, minivans, large SUVs", price: 189 },
     ],
     addOns: [
-      { name: "Engine bay cleaning", price: 65 },
-      { name: "Trim restoration (faded black plastic)", price: 35 },
-      { name: "Sealant upgrade (6-month synthetic)", price: 25 },
+      { name: "Engine bay cleaning", price: 69 },
+      { name: "Trim restoration (faded black plastic)", price: 39 },
+      { name: "Sealant upgrade (6-month synthetic)", price: 29 },
     ],
   },
   {
@@ -110,7 +110,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Interior Detail",
     description:
       "Deep cleaning for every surface inside your car. We vacuum, steam clean, condition the leather, and get rid of any odors. Your car will smell and feel like new.",
-    startingPrice: 150,
+    startingPrice: 175,
     targetKeyword: "interior car detailing Overland Park",
     icon: "car-seat",
     features: [
@@ -124,14 +124,14 @@ export const SERVICES: Service[] = [
     ],
     estimatedTime: "2-3 hours",
     vehicleTiers: [
-      { label: "Sedan / Car", description: "Coupes, sedans, small hatchbacks", price: 150 },
-      { label: "SUV / Crossover", description: "Mid-size SUVs, crossovers", price: 185 },
-      { label: "Truck / Van", description: "Full-size trucks, minivans, large SUVs", price: 210 },
+      { label: "Sedan / Car", description: "Coupes, sedans, small hatchbacks", price: 175 },
+      { label: "SUV / Crossover", description: "Mid-size SUVs, crossovers", price: 215 },
+      { label: "Truck / Van", description: "Full-size trucks, minivans, large SUVs", price: 249 },
     ],
     addOns: [
-      { name: "Pet hair removal", price: 40 },
-      { name: "Odor elimination (ozone treatment)", price: 50 },
-      { name: "Stain treatment (per area)", price: 30 },
+      { name: "Pet hair removal", price: 45 },
+      { name: "Odor elimination (ozone treatment)", price: 59 },
+      { name: "Stain treatment (per area)", price: 35 },
     ],
   },
   {
@@ -140,7 +140,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Full Detail",
     description:
       "The whole thing, inside and out. Our most popular package combines the full exterior and interior detail for a complete bumper-to-bumper transformation.",
-    startingPrice: 225,
+    startingPrice: 275,
     targetKeyword: "full car detail Overland Park",
     icon: "shield-check",
     features: [
@@ -154,18 +154,18 @@ export const SERVICES: Service[] = [
     ],
     estimatedTime: "3-5 hours",
     vehicleTiers: [
-      { label: "Sedan / Car", description: "Coupes, sedans, small hatchbacks", price: 225 },
-      { label: "SUV / Crossover", description: "Mid-size SUVs, crossovers", price: 285 },
-      { label: "Truck / Van", description: "Full-size trucks, minivans, large SUVs", price: 325 },
+      { label: "Sedan / Car", description: "Coupes, sedans, small hatchbacks", price: 275 },
+      { label: "SUV / Crossover", description: "Mid-size SUVs, crossovers", price: 339 },
+      { label: "Truck / Van", description: "Full-size trucks, minivans, large SUVs", price: 399 },
     ],
-    savings: "Save $25-$35 vs. booking interior and exterior separately",
+    savings: "Save $25-$39 vs. booking interior and exterior separately",
     addOns: [
-      { name: "Engine bay cleaning", price: 65 },
-      { name: "Pet hair removal", price: 40 },
-      { name: "Odor elimination (ozone treatment)", price: 50 },
-      { name: "Sealant upgrade (6-month synthetic)", price: 25 },
-      { name: "Stain treatment (per area)", price: 30 },
-      { name: "Trim restoration (faded black plastic)", price: 35 },
+      { name: "Engine bay cleaning", price: 69 },
+      { name: "Pet hair removal", price: 45 },
+      { name: "Odor elimination (ozone treatment)", price: 59 },
+      { name: "Sealant upgrade (6-month synthetic)", price: 29 },
+      { name: "Stain treatment (per area)", price: 35 },
+      { name: "Trim restoration (faded black plastic)", price: 39 },
     ],
   },
   {
@@ -174,7 +174,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Ceramic Coating",
     description:
       "A protective ceramic layer that lasts for years. It keeps your paint looking fresh, makes washing way easier, and protects against UV damage, bird droppings, and road grime.",
-    startingPrice: 399,
+    startingPrice: 449,
     targetKeyword: "ceramic coating Overland Park",
     icon: "droplet",
     features: [
@@ -188,9 +188,9 @@ export const SERVICES: Service[] = [
     ],
     estimatedTime: "Varies, by appointment only",
     coatingTiers: [
-      { label: "1-Year Coating", price: 399 },
-      { label: "3-Year Coating", price: 699 },
-      { label: "5-Year Coating", price: 999 },
+      { label: "1-Year Coating", price: 449 },
+      { label: "3-Year Coating", price: 749 },
+      { label: "5-Year Coating", price: 1099 },
     ],
   },
   {
@@ -199,7 +199,7 @@ export const SERVICES: Service[] = [
     shortTitle: "Headlight Restoration",
     description:
       "Cloudy, yellowed headlights are a safety hazard and make your car look old. We sand, polish, and seal them so they're crystal clear again.",
-    startingPrice: 75,
+    startingPrice: 79,
     targetKeyword: "headlight restoration Overland Park",
     icon: "lightbulb",
     features: [
@@ -210,7 +210,7 @@ export const SERVICES: Service[] = [
       "Both headlights included",
     ],
     estimatedTime: "45 minutes - 1 hour",
-    standalonePricing: { standalone: 75, addon: 55 },
+    standalonePricing: { standalone: 79, addon: 59 },
   },
 ];
 
@@ -253,21 +253,21 @@ export const TESTIMONIALS = [
 ] as const;
 
 export const CONTACT_SERVICE_OPTIONS = [
-  { value: "exterior-detail", label: "Exterior Wash & Detail (starting at $100)" },
-  { value: "interior-detail", label: "Interior Detail (starting at $150)" },
-  { value: "full-detail", label: "Full Detail Package (starting at $225)" },
-  { value: "ceramic-coating", label: "Ceramic Coating (starting at $399)" },
-  { value: "headlight-restoration", label: "Headlight Restoration (starting at $75)" },
+  { value: "exterior-detail", label: "Exterior Wash & Detail (starting at $125)" },
+  { value: "interior-detail", label: "Interior Detail (starting at $175)" },
+  { value: "full-detail", label: "Full Detail Package (starting at $275)" },
+  { value: "ceramic-coating", label: "Ceramic Coating (starting at $449)" },
+  { value: "headlight-restoration", label: "Headlight Restoration (starting at $79)" },
   { value: "not-sure", label: "Not sure - I need a recommendation" },
 ] as const;
 
 export const ALL_ADDONS: AddOn[] = [
-  { name: "Engine bay cleaning", price: 65 },
-  { name: "Pet hair removal", price: 40 },
-  { name: "Odor elimination (ozone treatment)", price: 50 },
-  { name: "Sealant upgrade (6-month synthetic sealant)", price: 25 },
-  { name: "Stain treatment (per area)", price: 30 },
-  { name: "Trim restoration (faded black plastic)", price: 35 },
+  { name: "Engine bay cleaning", price: 69 },
+  { name: "Pet hair removal", price: 45 },
+  { name: "Odor elimination (ozone treatment)", price: 59 },
+  { name: "Sealant upgrade (6-month synthetic sealant)", price: 29 },
+  { name: "Stain treatment (per area)", price: 35 },
+  { name: "Trim restoration (faded black plastic)", price: 39 },
 ];
 
 export const NAV_LINKS = [

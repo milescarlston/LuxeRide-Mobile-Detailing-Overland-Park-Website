@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "How much does ceramic coating cost in Overland Park?",
     answer:
-      "Our ceramic coating packages start at $399 for a 1-year coating, $699 for a 3-year coating, and $999 for a 5-year coating. Every package includes a full exterior detail, paint decontamination, and 1-step polish prep. Exact pricing depends on your vehicle size and paint condition. We will provide a custom quote after a quick inspection or phone consultation.",
+      "Our ceramic coating packages start at $449 for a 1-year coating, $749 for a 3-year coating, and $1,099 for a 5-year coating. Every package includes a full exterior detail, paint decontamination, and 1-step polish prep. Exact pricing depends on your vehicle size and paint condition. We will provide a custom quote after a quick inspection or phone consultation.",
   },
   {
     question: "Why do ceramic coating prices vary?",

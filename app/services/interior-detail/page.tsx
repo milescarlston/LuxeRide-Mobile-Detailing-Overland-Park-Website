@@ -54,7 +54,7 @@ const faqs = [
   {
     question: "How much does interior car detailing cost in Overland Park?",
     answer:
-      "Our interior detail starts at $150 for sedans and small cars, $185 for SUVs and crossovers, and $210 for trucks, vans, and large SUVs. Final price depends on vehicle size and condition. If the interior is heavily soiled or needs extra attention, we will let you know upfront before we start.",
+      "Our interior detail starts at $175 for sedans and small cars, $215 for SUVs and crossovers, and $249 for trucks, vans, and large SUVs. Final price depends on vehicle size and condition. If the interior is heavily soiled or needs extra attention, we will let you know upfront before we start.",
   },
   {
     question: "Why do prices vary by vehicle size?",
