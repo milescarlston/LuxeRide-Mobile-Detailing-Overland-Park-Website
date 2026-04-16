@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import { VehiclePricingTable } from "@/components/PricingTable";
+import AddOnsList from "@/components/AddOnsList";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
@@ -33,6 +36,16 @@ const faqs = [
     question: "Is the full detail worth it compared to just an exterior or interior detail?",
     answer:
       "It really is. The full detail gives you the best value because we take care of everything in one visit. You actually save money compared to booking our exterior and interior services separately. Plus you get extras like engine bay cleaning and door jamb detailing that are not part of the individual packages.",
+  },
+  {
+    question: "How much does a full car detail cost in Overland Park?",
+    answer:
+      "Our full detail starts at $225 for sedans, $285 for SUVs and crossovers, and $325 for trucks, vans, and large SUVs. That is actually $25 to $35 less than booking our interior and exterior details separately, and you get extras like engine bay cleaning and door jamb detailing included.",
+  },
+  {
+    question: "Why do prices vary by vehicle size?",
+    answer:
+      "Bigger vehicles mean more surface area inside and out, which takes more time, product, and labor. A full-size truck can take up to twice as long as a compact sedan. We price by size tier so you are only paying for the work your specific vehicle needs.",
   },
 ];
 
@@ -142,8 +155,34 @@ export default function FullDetailPage() {
         </div>
       </section>
 
-      {/* What's included */}
+      {/* Photo showcase */}
       <section className="bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
+            Full Detail Results
+          </h2>
+          <p className="mt-4 max-w-2xl text-[#4A4A4A]">
+            Inside and out, these vehicles got the full treatment.
+          </p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="overflow-hidden rounded-xl">
+              <Image src="/images/jeep-wrangler-exterior.png" alt="Jeep Wrangler Rubicon exterior after full detail" width={400} height={300} className="h-auto w-full object-cover" />
+            </div>
+            <div className="overflow-hidden rounded-xl">
+              <Image src="/images/jeep-wrangler-interior-front.png" alt="Jeep Wrangler Rubicon red leather interior after detail" width={400} height={300} className="h-auto w-full object-cover" />
+            </div>
+            <div className="overflow-hidden rounded-xl">
+              <Image src="/images/range-rover-rear.png" alt="Range Rover Sport rear view after full exterior detail" width={400} height={300} className="h-auto w-full object-cover" />
+            </div>
+            <div className="overflow-hidden rounded-xl">
+              <Image src="/images/range-rover-interior-rear.png" alt="Range Rover Sport rear seats after full interior detail" width={400} height={300} className="h-auto w-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What's included */}
+      <section className="bg-[#F7F7F5] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
             What&rsquo;s Included
@@ -181,27 +220,28 @@ export default function FullDetailPage() {
         </div>
       </section>
 
-      {/* Pricing callout */}
+      {/* Pricing */}
       <section className="bg-[#F7F7F5] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center rounded-xl border border-gray-200 bg-white px-6 py-12 text-center shadow-sm sm:px-12">
-            <p className="text-sm font-medium uppercase tracking-widest text-[#1E5FAE]">
-              Full Detail Package
-            </p>
-            <p className="mt-3 text-4xl font-bold text-[#1C1C1C] sm:text-5xl">
-              Starting at ${service.startingPrice}
-            </p>
-            <p className="mt-3 max-w-lg text-[#4A4A4A]">
-              Final price depends on the size and condition of your vehicle. Reach
-              out and we will give you an accurate quote for your car, truck, or
-              SUV.
-            </p>
-            <Link
-              href="/contact"
-              className="mt-8 inline-block rounded-md bg-[#10B981] px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#059669]"
-            >
-              Get Your Free Quote
-            </Link>
+          <div className="flex items-center gap-3">
+            <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
+              What It Costs
+            </h2>
+            <span className="rounded-full bg-[#1E5FAE] px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+              Most Popular
+            </span>
+          </div>
+          <p className="mt-4 max-w-2xl leading-relaxed text-[#4A4A4A]">
+            Book together and save $25-$35 compared to separate interior and
+            exterior details. Your price might be a bit higher if your car needs
+            extra love — we&apos;ll always let you know upfront before we start.
+          </p>
+          <div className="mt-8">
+            <VehiclePricingTable
+              tiers={service.vehicleTiers!}
+              estimatedTime={service.estimatedTime}
+              popular
+            />
           </div>
         </div>
       </section>
@@ -256,6 +296,21 @@ export default function FullDetailPage() {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      {/* Add-ons */}
+      <section className="bg-[#F7F7F5] py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
+            Popular Add-Ons
+          </h2>
+          <p className="mt-4 max-w-2xl text-[#4A4A4A]">
+            Customize your full detail with any of these extras.
+          </p>
+          <div className="mt-8">
+            <AddOnsList addOns={service.addOns!} />
+          </div>
         </div>
       </section>
 

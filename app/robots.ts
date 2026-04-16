@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://www.luxeridemobile.com/sitemap.xml",
+    sitemap: "https://luxeridedetailing.site/sitemap.xml",
   };
 }

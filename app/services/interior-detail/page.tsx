@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import { VehiclePricingTable } from "@/components/PricingTable";
+import AddOnsList from "@/components/AddOnsList";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
@@ -47,6 +50,16 @@ const faqs = [
       "What is the difference between a basic interior cleaning and a professional interior detail?",
     answer:
       "A basic cleaning is usually just a vacuum and a quick wipe-down. A professional interior detail goes way deeper. We steam clean fabrics, extract stains, clean and condition leather, detail every vent and crevice, treat plastics with UV protectant, and eliminate odors. When we're done, your car looks, feels, and smells like it just rolled off the lot.",
+  },
+  {
+    question: "How much does interior car detailing cost in Overland Park?",
+    answer:
+      "Our interior detail starts at $150 for sedans and small cars, $185 for SUVs and crossovers, and $210 for trucks, vans, and large SUVs. Final price depends on vehicle size and condition. If the interior is heavily soiled or needs extra attention, we will let you know upfront before we start.",
+  },
+  {
+    question: "Why do prices vary by vehicle size?",
+    answer:
+      "Bigger vehicles have more interior surface area. More seats, more carpet, more dashboard, more everything. A full-size SUV or truck takes significantly more time and product than a compact sedan. We price by size tier so you only pay for the work your vehicle actually needs.",
   },
 ];
 
@@ -130,34 +143,81 @@ export default function InteriorDetailPage() {
               </ul>
             </div>
 
-            {/* Pricing Callout */}
-            <div className="flex items-start">
-              <div className="w-full rounded-2xl border border-gray-200 bg-white p-8 shadow-sm sm:p-10">
-                <p className="text-sm font-medium uppercase tracking-wider text-[#1E5FAE]">
-                  Interior Detail
-                </p>
-                <p className="mt-4 text-4xl font-bold text-[#1C1C1C] sm:text-5xl">
-                  Starting at ${service.startingPrice}
-                </p>
-                <p className="mt-3 text-base leading-relaxed text-[#4A4A4A]">
-                  Final pricing depends on vehicle size and how dirty things
-                  are inside. Sedans, SUVs, trucks, and vans are all welcome.
-                  Reach out and we&rsquo;ll give you an exact quote.
-                </p>
-                <Link
-                  href="/contact"
-                  className="mt-8 inline-block rounded-lg bg-[#10B981] px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#059669]"
-                >
-                  Get a Free Quote
-                </Link>
+            <div>
+              <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
+                What It Costs
+              </h2>
+              <p className="mt-4 leading-relaxed text-[#4A4A4A]">
+                Pricing depends on your vehicle size. Your price might be a bit
+                higher if your interior needs extra love — we&apos;ll always let
+                you know upfront before we start.
+              </p>
+              <div className="mt-8">
+                <VehiclePricingTable
+                  tiers={service.vehicleTiers!}
+                  estimatedTime={service.estimatedTime}
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Process */}
+      {/* Before & After + Photos */}
       <section className="border-t border-gray-200 bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
+            Interior Detail Results
+          </h2>
+          <p className="mt-4 max-w-2xl text-[#4A4A4A]">
+            Real before and after results from vehicles we have detailed in the Overland Park area.
+          </p>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            {/* BMW X5 before/after */}
+            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+              <div className="grid grid-cols-2">
+                <div className="relative aspect-[4/3]">
+                  <span className="absolute left-2 top-2 z-10 rounded bg-red-500/90 px-2 py-0.5 text-xs font-semibold uppercase text-white">Before</span>
+                  <Image src="/images/bmw-x5-trunk-before.jpg" alt="BMW X5 trunk carpet before detailing with heavy staining" fill className="object-cover" sizes="25vw" />
+                </div>
+                <div className="relative aspect-[4/3]">
+                  <span className="absolute left-2 top-2 z-10 rounded bg-[#10B981]/90 px-2 py-0.5 text-xs font-semibold uppercase text-white">After</span>
+                  <Image src="/images/bmw-x5-trunk-after.jpg" alt="BMW X5 trunk carpet after professional extraction cleaning" fill className="object-cover" sizes="25vw" />
+                </div>
+              </div>
+              <p className="p-3 text-sm font-medium text-[#1C1C1C]">BMW X5 trunk carpet extraction</p>
+            </div>
+            {/* Silverado before/after */}
+            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+              <div className="grid grid-cols-2">
+                <div className="relative aspect-[4/3]">
+                  <span className="absolute left-2 top-2 z-10 rounded bg-red-500/90 px-2 py-0.5 text-xs font-semibold uppercase text-white">Before</span>
+                  <Image src="/images/silverado-rear-before.png" alt="Chevy Silverado rear seat before detailing with dirt and debris" fill className="object-cover" sizes="25vw" />
+                </div>
+                <div className="relative aspect-[4/3]">
+                  <span className="absolute left-2 top-2 z-10 rounded bg-[#10B981]/90 px-2 py-0.5 text-xs font-semibold uppercase text-white">After</span>
+                  <Image src="/images/silverado-rear-after.png" alt="Chevy Silverado rear seat after interior detailing with clean cloth" fill className="object-cover" sizes="25vw" />
+                </div>
+              </div>
+              <p className="p-3 text-sm font-medium text-[#1C1C1C]">Chevy Silverado rear seat deep clean</p>
+            </div>
+          </div>
+          <div className="mt-6 grid gap-4 sm:grid-cols-3">
+            <div className="overflow-hidden rounded-xl">
+              <Image src="/images/jeep-wrangler-interior-front.png" alt="Jeep Wrangler red leather seats after interior detail" width={400} height={300} className="h-auto w-full object-cover" />
+            </div>
+            <div className="overflow-hidden rounded-xl">
+              <Image src="/images/ram-3500-interior.png" alt="Ram 3500 tan leather interior after professional detailing" width={400} height={300} className="h-auto w-full object-cover" />
+            </div>
+            <div className="overflow-hidden rounded-xl">
+              <Image src="/images/range-rover-interior-dash.png" alt="Range Rover Sport dashboard and steering wheel after interior detail" width={400} height={300} className="h-auto w-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Process */}
+      <section className="border-t border-gray-200 bg-[#F7F7F5] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
@@ -208,6 +268,21 @@ export default function InteriorDetailPage() {
               home, office, or wherever your car is parked in the Overland Park
               area.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Add-ons */}
+      <section className="border-t border-gray-200 bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
+            Popular Add-Ons
+          </h2>
+          <p className="mt-4 max-w-2xl text-[#4A4A4A]">
+            Need a little extra? These pair well with an interior detail.
+          </p>
+          <div className="mt-8">
+            <AddOnsList addOns={service.addOns!} />
           </div>
         </div>
       </section>

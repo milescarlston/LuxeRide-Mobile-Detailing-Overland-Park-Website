@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import { VehiclePricingTable } from "@/components/PricingTable";
+import AddOnsList from "@/components/AddOnsList";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
@@ -47,6 +50,16 @@ const faqs = [
       "What is the difference between a paint sealant and a ceramic coating?",
     answer:
       "A paint sealant is a synthetic layer that protects your paint for about 3 to 4 months. It blocks UV rays, water spots, and everyday grime. Every exterior detail includes a fresh coat of sealant. A ceramic coating is a longer-term solution that lasts 2 to 5 years. It's tougher, shinier, and sheds water like crazy. If you want that kind of long-lasting protection, check out our ceramic coating service.",
+  },
+  {
+    question: "How much does exterior car detailing cost in Overland Park?",
+    answer:
+      "Our exterior wash and detail starts at $100 for sedans and small cars, $130 for SUVs and crossovers, and $150 for trucks, vans, and large SUVs. Final price depends on your vehicle's size and condition. We always confirm pricing upfront before we start so there are no surprises.",
+  },
+  {
+    question: "Why do prices vary by vehicle size?",
+    answer:
+      "Bigger vehicles have more surface area, which means more time, more product, and more labor. A full-size truck takes about twice as long to detail as a sedan. We price by size tier so you only pay for the work your vehicle actually needs.",
   },
 ];
 
@@ -129,33 +142,51 @@ export default function ExteriorDetailPage() {
               </ul>
             </div>
 
-            {/* Pricing callout */}
-            <div className="flex items-start lg:justify-end">
-              <div className="w-full max-w-sm rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm">
-                <p className="text-sm font-medium uppercase tracking-wider text-[#1E5FAE]">
-                  Starting at
-                </p>
-                <p className="mt-2 text-5xl font-bold text-[#1C1C1C]">$75</p>
-                <p className="mt-2 text-sm text-[#4A4A4A]">
-                  Price varies by vehicle size &amp; condition
-                </p>
-                <Link
-                  href="/contact"
-                  className="mt-6 inline-block w-full rounded-md bg-[#10B981] px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-[#059669]"
-                >
-                  Get a Free Quote
-                </Link>
-                <p className="mt-4 text-xs text-[#4A4A4A]">
-                  No obligation. We&apos;ll confirm pricing before we start.
-                </p>
+            <div>
+              <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
+                What It Costs
+              </h2>
+              <p className="mt-4 leading-relaxed text-[#4A4A4A]">
+                Pricing starts based on your vehicle size. Your price might be a
+                bit higher if your car needs extra love — we&apos;ll always let
+                you know upfront before we start.
+              </p>
+              <div className="mt-8">
+                <VehiclePricingTable
+                  tiers={service.vehicleTiers!}
+                  estimatedTime={service.estimatedTime}
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Process & Benefits */}
+      {/* Photo showcase */}
       <section className="border-t border-gray-200 bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
+            Exterior Detail Results
+          </h2>
+          <p className="mt-4 max-w-2xl text-[#4A4A4A]">
+            Here are some vehicles we have detailed in the Overland Park area.
+          </p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="overflow-hidden rounded-xl">
+              <Image src="/images/jeep-wrangler-exterior.png" alt="Jeep Wrangler Rubicon after exterior detail with gleaming paint finish" width={600} height={450} className="h-auto w-full object-cover" />
+            </div>
+            <div className="overflow-hidden rounded-xl">
+              <Image src="/images/range-rover-front.png" alt="Range Rover Sport front view after exterior detail with glossy paint" width={600} height={450} className="h-auto w-full object-cover" />
+            </div>
+            <div className="overflow-hidden rounded-xl">
+              <Image src="/images/ram-3500-chrome-wheel.png" alt="Ram 3500 chrome dually wheel polished to mirror finish" width={600} height={450} className="h-auto w-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process & Benefits */}
+      <section className="border-t border-gray-200 bg-[#F7F7F5] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
@@ -219,6 +250,21 @@ export default function ExteriorDetailPage() {
                 rest while you go about your day.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Add-ons */}
+      <section className="border-t border-gray-200 bg-[#F7F7F5] py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
+            Popular Add-Ons
+          </h2>
+          <p className="mt-4 max-w-2xl text-[#4A4A4A]">
+            Pair your exterior detail with any of these for even better results.
+          </p>
+          <div className="mt-8">
+            <AddOnsList addOns={service.addOns!} />
           </div>
         </div>
       </section>

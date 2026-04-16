@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ServiceCard from "@/components/ServiceCard";
-import PricingCards from "@/components/PricingCards";
+import AddOnsList from "@/components/AddOnsList";
 import CTASection from "@/components/CTASection";
-import { BUSINESS, SERVICES } from "@/lib/constants";
+import { BUSINESS, SERVICES, ALL_ADDONS } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Auto Detailing Services Overland Park KS",
@@ -45,7 +45,20 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <PricingCards />
+      {/* Add-ons */}
+      <section className="border-t border-gray-200 bg-[#F7F7F5] py-14 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
+            Popular Add-Ons
+          </h2>
+          <p className="mt-3 max-w-2xl text-base text-[#4A4A4A]">
+            Add any of these to your detail for even better results.
+          </p>
+          <div className="mt-8">
+            <AddOnsList addOns={ALL_ADDONS} />
+          </div>
+        </div>
+      </section>
 
       <CTASection
         headline="Not Sure Which Service You Need?"

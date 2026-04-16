@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
 import { BUSINESS, SERVICE_AREAS } from "@/lib/constants";
@@ -66,28 +67,14 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Image placeholder */}
-            <div
-              className="flex aspect-[4/3] items-center justify-center rounded-xl bg-gray-100 lg:aspect-auto"
-              role="img"
-              aria-label="LuxeRide mobile detailing setup working on a car in a driveway in Overland Park"
-            >
-              <div className="text-center">
-                <svg
-                  className="mx-auto h-16 w-16 text-gray-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={0.75}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5a1.5 1.5 0 001.5-1.5V4.5a1.5 1.5 0 00-1.5-1.5H3.75a1.5 1.5 0 00-1.5 1.5v15a1.5 1.5 0 001.5 1.5z"
-                  />
-                </svg>
-                <p className="mt-2 text-sm text-gray-400">Photo coming soon</p>
-              </div>
+            <div className="overflow-hidden rounded-xl">
+              <Image
+                src="/images/hero.jpg"
+                alt="LuxeRide mobile detailing setup working on a Ram truck in a customer driveway in Overland Park"
+                width={800}
+                height={600}
+                className="h-full w-full object-cover"
+              />
             </div>
           </div>
         </div>

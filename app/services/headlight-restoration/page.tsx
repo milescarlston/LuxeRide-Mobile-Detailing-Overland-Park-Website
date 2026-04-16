@@ -5,6 +5,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import { BUSINESS, SERVICES } from "@/lib/constants";
 import { serviceSchema, faqSchema } from "@/lib/schema";
+import { HeadlightPricingTable } from "@/components/PricingTable";
 
 export const metadata: Metadata = {
   title: "Headlight Restoration Overland Park",
@@ -36,7 +37,7 @@ const faqs = [
     question:
       "Is headlight restoration cheaper than replacing the headlight assembly?",
     answer:
-      "Way cheaper. A new OEM headlight assembly runs anywhere from $200 to over $1,000 per side, depending on your vehicle. Some cars with LED or adaptive headlights cost even more. Our restoration starts at just $59 for both headlights and gets them looking like new. That is a no-brainer for most people.",
+      "Way cheaper. A new OEM headlight assembly runs anywhere from $200 to over $1,000 per side, depending on your vehicle. Some cars with LED or adaptive headlights cost even more. Our restoration starts at just $75 for both headlights and gets them looking like new. That is a no-brainer for most people.",
   },
   {
     question: "Does headlight restoration improve safety?",
@@ -47,6 +48,16 @@ const faqs = [
     question: "Can you restore headlights that are severely yellowed or hazed?",
     answer:
       "In most cases, yes. Our multi-stage wet-sanding process uses progressively finer grits to remove even heavy oxidation and surface damage. As long as the haze is on the outer surface of the lens and the plastic is not cracked or damaged on the inside, we can bring them back to near-original clarity.",
+  },
+  {
+    question: "How much does headlight restoration cost in Overland Park?",
+    answer:
+      "Headlight restoration starts at $75 as a standalone service or starting at $55 when added to any detail package. That covers both headlights. Compared to replacing headlight assemblies, which can run $200 to over $1,000 per side, restoration is a no-brainer for most vehicles.",
+  },
+  {
+    question: "Why is headlight restoration cheaper as an add-on?",
+    answer:
+      "When we are already on-site detailing your vehicle, we have all our equipment set up and ready to go. That means less setup time and less overhead for headlight work. We pass those savings on to you. It is a great add-on to any exterior or full detail.",
   },
 ];
 
@@ -228,7 +239,7 @@ export default function HeadlightRestorationPage() {
               <p className="mt-4 leading-relaxed text-[#4A4A4A]">
                 Our headlight restoration gets you the same clear result for a
                 fraction of the price. We start at just{" "}
-                <strong className="text-[#1E5FAE]">$59 for both
+                <strong className="text-[#1E5FAE]">$75 for both
                 headlights</strong>. That is one of the best deals in auto care.
                 Pair it with an{" "}
                 <Link
@@ -283,23 +294,20 @@ export default function HeadlightRestorationPage() {
             </div>
 
             {/* Pricing Callout */}
-            <div className="flex items-start">
-              <div className="w-full rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm">
-                <p className="text-sm font-medium uppercase tracking-widest text-[#1E5FAE]">
-                  Both Headlights
-                </p>
-                <p className="mt-3 text-4xl font-bold tracking-tight text-[#1C1C1C] sm:text-5xl">
-                  Starting at $59
-                </p>
-                <p className="mt-3 text-[#4A4A4A]">
-                  Price may vary by vehicle size and severity of oxidation.
-                </p>
-                <Link
-                  href="/contact"
-                  className="mt-6 inline-block rounded-md bg-[#10B981] px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#059669]"
-                >
-                  Book Your Restoration
-                </Link>
+            <div>
+              <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
+                What It Costs
+              </h2>
+              <p className="mt-4 leading-relaxed text-[#4A4A4A]">
+                Get it done standalone or save when you add it to any detail
+                package.
+              </p>
+              <div className="mt-8">
+                <HeadlightPricingTable
+                  standalone={service.standalonePricing!.standalone}
+                  addon={service.standalonePricing!.addon}
+                  estimatedTime={service.estimatedTime}
+                />
               </div>
             </div>
           </div>

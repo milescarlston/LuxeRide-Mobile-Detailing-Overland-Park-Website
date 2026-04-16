@@ -1,8 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
-import PricingCards from "@/components/PricingCards";
 import HowItWorks from "@/components/HowItWorks";
 import ServiceAreaMap from "@/components/ServiceAreaMap";
 import CTASection from "@/components/CTASection";
@@ -62,18 +62,15 @@ export default function HomePage() {
                 </a>
               </div>
             </div>
-            {/* Hero image placeholder */}
-            <div
-              className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-gray-100"
-              role="img"
-              aria-label="Mobile car detailing in customer driveway in Overland Park on a sunny day"
-            >
-              <div className="text-center">
-                <svg className="mx-auto h-16 w-16 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={0.75}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5a1.5 1.5 0 001.5-1.5V4.5a1.5 1.5 0 00-1.5-1.5H3.75a1.5 1.5 0 00-1.5 1.5v15a1.5 1.5 0 001.5 1.5z" />
-                </svg>
-                <p className="mt-2 text-sm text-gray-400">Hero photo</p>
-              </div>
+            <div className="overflow-hidden rounded-2xl">
+              <Image
+                src="/images/hero.jpg"
+                alt="LuxeRide mobile detailing setup working on a lifted Ram truck in a customer driveway in Overland Park"
+                width={800}
+                height={600}
+                className="h-auto w-full object-cover"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -150,8 +147,41 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Pricing */}
-      <PricingCards />
+      {/* Recent work showcase */}
+      <section className="border-t border-gray-200 bg-[#F7F7F5] py-14 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold tracking-tight text-[#1C1C1C] sm:text-3xl">
+              Recent Work
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-base text-[#4A4A4A]">
+              Real results from vehicles we have detailed in the Overland Park area.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="overflow-hidden rounded-xl">
+              <Image src="/images/jeep-wrangler-exterior.png" alt="Jeep Wrangler Rubicon after full exterior detail in Overland Park" width={400} height={300} className="h-auto w-full object-cover" />
+            </div>
+            <div className="overflow-hidden rounded-xl">
+              <Image src="/images/ram-3500-interior.png" alt="Ram 3500 tan leather interior after professional detailing" width={400} height={300} className="h-auto w-full object-cover" />
+            </div>
+            <div className="overflow-hidden rounded-xl">
+              <Image src="/images/range-rover-front.png" alt="Range Rover Sport front view after exterior detail" width={400} height={300} className="h-auto w-full object-cover" />
+            </div>
+            <div className="overflow-hidden rounded-xl">
+              <Image src="/images/range-rover-interior-dash.png" alt="Range Rover Sport dashboard after interior detail" width={400} height={300} className="h-auto w-full object-cover" />
+            </div>
+          </div>
+          <div className="mt-8 text-center">
+            <Link
+              href="/gallery"
+              className="text-sm font-medium text-[#1E5FAE] transition-colors hover:text-[#164a8a]"
+            >
+              View Full Gallery &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* How it works */}
       <HowItWorks />

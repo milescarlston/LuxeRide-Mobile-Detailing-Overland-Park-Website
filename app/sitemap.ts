@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SERVICES } from "@/lib/constants";
 
-const BASE_URL = "https://www.luxeridemobile.com";
+const BASE_URL = "https://luxeridedetailing.site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [

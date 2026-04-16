@@ -40,8 +40,7 @@ export default function GalleryPage() {
           </div>
 
           <p className="mt-10 text-center text-sm text-[#4A4A4A]">
-            Real customer photos coming soon. These placeholders represent the types of
-            work we do every day.
+            All photos are from real customer vehicles detailed by LuxeRide in the Overland Park area.
           </p>
         </div>
       </section>

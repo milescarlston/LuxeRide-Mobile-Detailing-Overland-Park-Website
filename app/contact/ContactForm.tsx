@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { SERVICES } from "@/lib/constants";
+import { CONTACT_SERVICE_OPTIONS } from "@/lib/constants";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -102,12 +102,11 @@ export default function ContactForm() {
             className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-[#1C1C1C] outline-none transition-colors focus:border-[#1E5FAE] focus:ring-1 focus:ring-[#1E5FAE]"
           >
             <option value="">Select a service</option>
-            {SERVICES.map((s) => (
-              <option key={s.slug} value={s.slug}>
-                {s.title}
+            {CONTACT_SERVICE_OPTIONS.map((opt) => (
+              <option key={opt.value} value={opt.value}>
+                {opt.label}
               </option>
             ))}
-            <option value="other">Not sure / Other</option>
           </select>
         </div>
         <div>

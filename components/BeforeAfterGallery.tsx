@@ -1,46 +1,93 @@
+import Image from "next/image";
+
 interface GalleryItem {
   title: string;
   service: string;
-  beforeAlt: string;
-  afterAlt: string;
+  before?: { src: string; alt: string };
+  after?: { src: string; alt: string };
+  photos?: { src: string; alt: string }[];
 }
 
 const galleryItems: GalleryItem[] = [
   {
-    title: "BMW X5 Full Detail",
-    service: "Full Detail",
-    beforeAlt: "BMW X5 before full detail showing dirt and grime in customer driveway Overland Park",
-    afterAlt: "BMW X5 after full detail looking clean and shiny in customer driveway Overland Park",
-  },
-  {
-    title: "Tesla Model Y Ceramic Coating",
-    service: "Ceramic Coating",
-    beforeAlt: "Tesla Model Y before ceramic coating with swirl marks and water spots",
-    afterAlt: "Tesla Model Y after ceramic coating with water beading on the surface",
-  },
-  {
-    title: "Ford F-150 Interior Detail",
+    title: "BMW X5 Trunk Carpet Cleaning",
     service: "Interior Detail",
-    beforeAlt: "Ford F-150 interior before detailing with stains and debris on seats",
-    afterAlt: "Ford F-150 interior after detailing with clean seats and fresh surfaces",
+    before: {
+      src: "/images/bmw-x5-trunk-before.jpg",
+      alt: "BMW X5 trunk carpet before detailing showing heavy dirt and stains",
+    },
+    after: {
+      src: "/images/bmw-x5-trunk-after.jpg",
+      alt: "BMW X5 trunk carpet after professional extraction cleaning with fresh lines",
+    },
   },
   {
-    title: "Honda Accord Exterior Detail",
-    service: "Exterior Detail",
-    beforeAlt: "Honda Accord exterior before detail with water spots and dull paint",
-    afterAlt: "Honda Accord exterior after detail with glossy clean finish",
+    title: "Chevy Silverado Rear Seat Cleaning",
+    service: "Interior Detail",
+    before: {
+      src: "/images/silverado-rear-before.png",
+      alt: "Chevy Silverado rear seat before detailing with dirt and stains on cloth seats",
+    },
+    after: {
+      src: "/images/silverado-rear-after.png",
+      alt: "Chevy Silverado rear seat after professional interior detailing with clean cloth and carpet",
+    },
   },
   {
-    title: "Chevy Tahoe Full Detail",
+    title: "Jeep Wrangler Rubicon Full Detail",
     service: "Full Detail",
-    beforeAlt: "Chevy Tahoe before full detail showing muddy wheels and dirty paint",
-    afterAlt: "Chevy Tahoe after full detail looking brand new in driveway",
+    photos: [
+      {
+        src: "/images/jeep-wrangler-exterior.png",
+        alt: "Jeep Wrangler Rubicon exterior after full detail with gleaming paint and bronze wheels",
+      },
+      {
+        src: "/images/jeep-wrangler-interior-front.png",
+        alt: "Jeep Wrangler Rubicon interior after detail showing clean red leather seats",
+      },
+    ],
   },
   {
-    title: "Toyota Camry Headlight Restoration",
-    service: "Headlight Restoration",
-    beforeAlt: "Toyota Camry headlights before restoration showing yellowing and haze",
-    afterAlt: "Toyota Camry headlights after restoration crystal clear",
+    title: "Ram 3500 Dually Exterior & Interior",
+    service: "Full Detail",
+    photos: [
+      {
+        src: "/images/ram-3500-exterior.png",
+        alt: "White Ram 3500 dually truck after exterior detail with polished chrome wheels",
+      },
+      {
+        src: "/images/ram-3500-interior.png",
+        alt: "Ram 3500 interior after detail showing clean tan leather seats and fresh carpet",
+      },
+    ],
+  },
+  {
+    title: "Range Rover Sport Full Detail",
+    service: "Full Detail",
+    photos: [
+      {
+        src: "/images/range-rover-front.png",
+        alt: "Dark green Range Rover Sport front view after full exterior detail with glossy paint",
+      },
+      {
+        src: "/images/range-rover-interior-dash.png",
+        alt: "Range Rover Sport interior after detail showing clean steering wheel and dashboard",
+      },
+    ],
+  },
+  {
+    title: "Ram 3500 Chrome Wheel Detail",
+    service: "Exterior Detail",
+    photos: [
+      {
+        src: "/images/ram-3500-chrome-wheel.png",
+        alt: "Ram 3500 dually chrome wheel polished to a mirror finish after detailing",
+      },
+      {
+        src: "/images/ram-3500-exterior.png",
+        alt: "White Ram 3500 dually truck after full exterior wash and detail",
+      },
+    ],
   },
 ];
 
@@ -54,38 +101,48 @@ export default function BeforeAfterGallery({ limit }: { limit?: number }) {
           key={item.title}
           className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm"
         >
-          <div className="grid grid-cols-2">
-            {/* Before placeholder */}
-            <div
-              className="flex aspect-[4/3] items-center justify-center bg-gray-100"
-              role="img"
-              aria-label={item.beforeAlt}
-            >
-              <div className="text-center">
-                <span className="block text-xs font-semibold uppercase tracking-wider text-red-500">
+          {item.before && item.after ? (
+            <div className="grid grid-cols-2">
+              <div className="relative aspect-[4/3]">
+                <span className="absolute left-2 top-2 z-10 rounded bg-red-500/90 px-2 py-0.5 text-xs font-semibold uppercase text-white">
                   Before
                 </span>
-                <svg className="mx-auto mt-1 h-8 w-8 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5a1.5 1.5 0 001.5-1.5V4.5a1.5 1.5 0 00-1.5-1.5H3.75a1.5 1.5 0 00-1.5 1.5v15a1.5 1.5 0 001.5 1.5z" />
-                </svg>
+                <Image
+                  src={item.before.src}
+                  alt={item.before.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 20vw"
+                />
               </div>
-            </div>
-            {/* After placeholder */}
-            <div
-              className="flex aspect-[4/3] items-center justify-center bg-gray-50"
-              role="img"
-              aria-label={item.afterAlt}
-            >
-              <div className="text-center">
-                <span className="block text-xs font-semibold uppercase tracking-wider text-[#10B981]">
+              <div className="relative aspect-[4/3]">
+                <span className="absolute left-2 top-2 z-10 rounded bg-[#10B981]/90 px-2 py-0.5 text-xs font-semibold uppercase text-white">
                   After
                 </span>
-                <svg className="mx-auto mt-1 h-8 w-8 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5a1.5 1.5 0 001.5-1.5V4.5a1.5 1.5 0 00-1.5-1.5H3.75a1.5 1.5 0 00-1.5 1.5v15a1.5 1.5 0 001.5 1.5z" />
-                </svg>
+                <Image
+                  src={item.after.src}
+                  alt={item.after.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 20vw"
+                />
               </div>
             </div>
-          </div>
+          ) : item.photos ? (
+            <div className="grid grid-cols-2">
+              {item.photos.map((photo, i) => (
+                <div key={i} className="relative aspect-[4/3]">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 20vw"
+                  />
+                </div>
+              ))}
+            </div>
+          ) : null}
           <div className="p-4">
             <h3 className="text-sm font-semibold text-[#1C1C1C]">{item.title}</h3>
             <span className="mt-1 inline-block rounded-full bg-[#1E5FAE]/10 px-2.5 py-0.5 text-xs font-medium text-[#1E5FAE]">

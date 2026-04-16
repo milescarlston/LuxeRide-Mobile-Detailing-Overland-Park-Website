@@ -44,7 +44,7 @@ export default function ServiceCard({ service }: { service: Service }) {
       </p>
       <div className="mt-4 flex items-center justify-between">
         <span className="text-sm font-semibold text-[#1E5FAE]">
-          From ${service.startingPrice}
+          Starting at ${service.startingPrice}
         </span>
         <span className="text-sm font-medium text-[#4A4A4A] transition-colors group-hover:text-[#1E5FAE]">
           Learn More &rarr;
