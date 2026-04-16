@@ -6,7 +6,7 @@ import AddOnsList from "@/components/AddOnsList";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
-import { BUSINESS, SERVICES } from "@/lib/constants";
+import { BUSINESS, SERVICES, OG_IMAGES, OG_IMAGE_URL } from "@/lib/constants";
 import { serviceSchema, faqSchema } from "@/lib/schema";
 
 const service = SERVICES.find((s) => s.slug === "full-detail")!;
@@ -49,16 +49,26 @@ const faqs = [
   },
 ];
 
+const TITLE = "Full Car Detail Overland Park, KS | LuxeRide Mobile Detailing";
+const DESCRIPTION =
+  "Our most popular service — full interior and exterior detailing in Overland Park starting at $275. Save vs. booking separately. Mobile service, zero hassle.";
+
 export const metadata: Metadata = {
-  title: "Full Car Detail Overland Park",
-  description:
-    "Get a full car detail in Overland Park from LuxeRide Mobile Detailing. Bumper-to-bumper interior & exterior service. Book your appointment today!",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/services/full-detail" },
   openGraph: {
-    title: `Full Car Detail Overland Park | ${BUSINESS.name}`,
-    description:
-      "Complete bumper-to-bumper detailing combining our exterior and interior packages. Engine bay, door jambs, headlights & more. Mobile service in Overland Park, KS.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "/services/full-detail",
+    type: "website",
+    images: OG_IMAGES,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE_URL],
   },
 };
 

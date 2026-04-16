@@ -1,5 +1,28 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { SERVICES } from "@/lib/constants";
+import { SERVICES, OG_IMAGES, OG_IMAGE_URL } from "@/lib/constants";
+
+const TITLE = "Page Not Found | LuxeRide Mobile Car Detailing Overland Park";
+const DESCRIPTION =
+  "This page doesn't exist, but we do! LuxeRide offers professional mobile car detailing in Overland Park, KS. Head back to our homepage or browse our services.";
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  robots: { index: false, follow: true },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    type: "website",
+    images: OG_IMAGES,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE_URL],
+  },
+};
 
 export default function NotFound() {
   return (

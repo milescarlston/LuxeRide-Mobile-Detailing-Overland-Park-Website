@@ -3,18 +3,34 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import ServiceCard from "@/components/ServiceCard";
 import AddOnsList from "@/components/AddOnsList";
 import CTASection from "@/components/CTASection";
-import { BUSINESS, SERVICES, ALL_ADDONS } from "@/lib/constants";
+import {
+  BUSINESS,
+  SERVICES,
+  ALL_ADDONS,
+  OG_IMAGES,
+  OG_IMAGE_URL,
+} from "@/lib/constants";
+
+const TITLE = "Auto Detailing Services | LuxeRide Mobile Car Detailing Overland Park";
+const DESCRIPTION =
+  "Explore our mobile detailing services in Overland Park — exterior wash, interior detail, full detail packages, ceramic coating, and headlight restoration. Starting at $125.";
 
 export const metadata: Metadata = {
-  title: "Auto Detailing Services Overland Park KS",
-  description:
-    "Mobile auto detailing services in Overland Park, KS. Exterior wash, interior detail, full detail, ceramic coating, and headlight restoration. Get a free quote!",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/services" },
   openGraph: {
-    title: `Auto Detailing Services | ${BUSINESS.name}`,
-    description:
-      "Professional mobile auto detailing services in Overland Park, KS. Exterior, interior, full detail, ceramic coating and more.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "/services",
+    type: "website",
+    images: OG_IMAGES,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE_URL],
   },
 };
 

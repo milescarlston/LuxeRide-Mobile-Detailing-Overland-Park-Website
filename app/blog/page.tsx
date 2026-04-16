@@ -1,18 +1,28 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { BUSINESS } from "@/lib/constants";
+import { BUSINESS, OG_IMAGES, OG_IMAGE_URL } from "@/lib/constants";
+
+const TITLE = "Car Detailing Tips & Guides | LuxeRide Mobile Detailing Blog";
+const DESCRIPTION =
+  "Helpful tips on car care, detailing, ceramic coating, and keeping your vehicle looking its best in Overland Park. Expert advice from LuxeRide Mobile Detailing.";
 
 export const metadata: Metadata = {
-  title: "Car Detailing Tips & Guides",
-  description:
-    "Practical car detailing tips and guides from LuxeRide Mobile Detailing in Overland Park, KS. Learn how to keep your car looking its best between details.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: `Blog | ${BUSINESS.name}`,
-    description:
-      "Practical car detailing tips and guides from the LuxeRide team.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "/blog",
+    type: "website",
+    images: OG_IMAGES,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE_URL],
   },
 };
 

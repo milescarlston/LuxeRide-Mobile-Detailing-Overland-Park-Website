@@ -270,6 +270,14 @@ export const ALL_ADDONS: AddOn[] = [
   { name: "Trim restoration (faded black plastic)", price: 39 },
 ];
 
+// Default OG/Twitter social-share image for all pages. Resolves to the
+// route-level `app/opengraph-image.tsx` file-convention image.
+export const OG_IMAGE_URL = "/opengraph-image";
+export const OG_IMAGE_ALT = "LuxeRide Mobile Car Detailing in Overland Park, KS";
+export const OG_IMAGES = [
+  { url: OG_IMAGE_URL, width: 1200, height: 630, alt: OG_IMAGE_ALT },
+];
+
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
   {

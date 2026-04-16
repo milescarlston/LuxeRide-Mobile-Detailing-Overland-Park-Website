@@ -3,18 +3,33 @@ import Link from "next/link";
 import Image from "next/image";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
-import { BUSINESS, SERVICE_AREAS } from "@/lib/constants";
+import {
+  BUSINESS,
+  SERVICE_AREAS,
+  OG_IMAGES,
+  OG_IMAGE_URL,
+} from "@/lib/constants";
+
+const TITLE = "About LuxeRide | Mobile Car Detailing in Overland Park, KS";
+const DESCRIPTION =
+  "LuxeRide brings professional car detailing to your door in Overland Park. Learn about our team, our process, and why local customers trust us with their vehicles.";
 
 export const metadata: Metadata = {
-  title: "About Us - Mobile Car Detailing Near Me Overland Park",
-  description:
-    "Learn about LuxeRide Mobile Car Detailing in Overland Park, KS. Local, experienced, and committed to making your car look its best. Meet our team.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/about" },
   openGraph: {
-    title: `About ${BUSINESS.name}`,
-    description:
-      "Local mobile car detailing in Overland Park, KS. Professional results, friendly service, and we come to you.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "/about",
+    type: "website",
+    images: OG_IMAGES,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE_URL],
   },
 };
 

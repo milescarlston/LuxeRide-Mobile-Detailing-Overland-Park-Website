@@ -1,18 +1,28 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ContactForm from "./ContactForm";
-import { BUSINESS } from "@/lib/constants";
+import { BUSINESS, OG_IMAGES, OG_IMAGE_URL } from "@/lib/constants";
+
+const TITLE = "Book Mobile Car Detailing Overland Park | LuxeRide Free Quote";
+const DESCRIPTION =
+  "Ready to get your car detailed? Book LuxeRide mobile detailing in Overland Park — free quotes, flexible scheduling, and we come to you. Call or book online.";
 
 export const metadata: Metadata = {
-  title: "Book Mobile Car Detailing Overland Park",
-  description:
-    "Book your mobile car detailing in Overland Park, KS. Contact LuxeRide for a free quote. We come to your home or office. Call or book online today!",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: `Contact & Book Now | ${BUSINESS.name}`,
-    description:
-      "Book your mobile car detailing in Overland Park, KS. Contact LuxeRide for a free quote.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "/contact",
+    type: "website",
+    images: OG_IMAGES,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE_URL],
   },
 };
 

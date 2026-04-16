@@ -5,21 +5,31 @@ import { CoatingPricingTable } from "@/components/PricingTable";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
-import { BUSINESS, SERVICES } from "@/lib/constants";
+import { BUSINESS, SERVICES, OG_IMAGES, OG_IMAGE_URL } from "@/lib/constants";
 import { serviceSchema, faqSchema } from "@/lib/schema";
 
 const service = SERVICES.find((s) => s.slug === "ceramic-coating")!;
 
+const TITLE = "Ceramic Coating Overland Park, KS | LuxeRide Mobile Detailing";
+const DESCRIPTION =
+  "Professional ceramic coating in Overland Park starting at $449. 1-year, 3-year, and 5-year protection options. Includes full detail and paint prep. Get a quote.";
+
 export const metadata: Metadata = {
-  title: "Ceramic Coating Overland Park",
-  description:
-    "Professional ceramic coating in Overland Park, KS. Long-lasting SiO2 nano-ceramic protection with hydrophobic finish by LuxeRide Mobile Detailing. Book today!",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/services/ceramic-coating" },
   openGraph: {
-    title: `Ceramic Coating Overland Park | ${BUSINESS.name}`,
-    description:
-      "Ceramic coating in Overland Park that actually lasts. We come to you, prep your paint properly, and apply pro-grade protection. Free quotes available.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "/services/ceramic-coating",
+    type: "website",
+    images: OG_IMAGES,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE_URL],
   },
 };
 

@@ -3,20 +3,30 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
-import { BUSINESS, SERVICES } from "@/lib/constants";
+import { BUSINESS, SERVICES, OG_IMAGES, OG_IMAGE_URL } from "@/lib/constants";
 import { serviceSchema, faqSchema } from "@/lib/schema";
 import { HeadlightPricingTable } from "@/components/PricingTable";
 
+const TITLE = "Headlight Restoration Overland Park, KS | LuxeRide Mobile Detailing";
+const DESCRIPTION =
+  "Cloudy or yellowed headlights? Headlight restoration in Overland Park starting at $79. Wet sand, polish, and UV sealant. Add to any detail for just $59.";
+
 export const metadata: Metadata = {
-  title: "Headlight Restoration Overland Park",
-  description:
-    "Professional headlight restoration in Overland Park, KS. We remove oxidation and haze with wet-sanding, polishing, and UV clear coat. Book your appointment today!",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/services/headlight-restoration" },
   openGraph: {
-    title: `Headlight Restoration Overland Park | ${BUSINESS.name}`,
-    description:
-      "Restore cloudy, yellowed headlights to crystal-clear condition with LuxeRide's professional headlight restoration service in Overland Park, KS.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "/services/headlight-restoration",
+    type: "website",
+    images: OG_IMAGES,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE_URL],
   },
 };
 

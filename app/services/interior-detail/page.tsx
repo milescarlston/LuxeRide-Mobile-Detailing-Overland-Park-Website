@@ -6,21 +6,31 @@ import AddOnsList from "@/components/AddOnsList";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
-import { BUSINESS, SERVICES } from "@/lib/constants";
+import { BUSINESS, SERVICES, OG_IMAGES, OG_IMAGE_URL } from "@/lib/constants";
 import { serviceSchema, faqSchema } from "@/lib/schema";
 
 const service = SERVICES.find((s) => s.slug === "interior-detail")!;
 
+const TITLE = "Interior Car Detailing Overland Park, KS | LuxeRide Mobile Detailing";
+const DESCRIPTION =
+  "Deep interior car detailing in Overland Park starting at $175. Vacuum, shampoo, leather conditioning, dashboard cleaning & more. We come to you — book today.";
+
 export const metadata: Metadata = {
-  title: "Interior Car Detailing Overland Park",
-  description:
-    "Professional interior car detailing in Overland Park, KS. Deep vacuuming, steam cleaning, leather conditioning & odor removal. Book your mobile detail today!",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/services/interior-detail" },
   openGraph: {
-    title: `Interior Car Detailing Overland Park | ${BUSINESS.name}`,
-    description:
-      "Expert interior car detailing in Overland Park. We come to you for thorough cabin cleaning, leather care, and odor elimination.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "/services/interior-detail",
+    type: "website",
+    images: OG_IMAGES,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE_URL],
   },
 };
 

@@ -20,12 +20,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(BUSINESS.url),
-  title: {
-    default: `${BUSINESS.name} | Mobile Detailing in Overland Park, KS`,
-    template: `%s | ${BUSINESS.name} Overland Park`,
-  },
+  // Plain-string fallback title; each page sets its own absolute title so
+  // keyword-optimized per-page titles render exactly as written.
+  title: "Mobile Car Detailing Overland Park, KS | LuxeRide Mobile Detailing",
   description:
-    "Professional mobile car detailing in Overland Park, KS. We come to your home or office with exterior & interior detailing, ceramic coating, and more. Book today!",
+    "Professional mobile car detailing in Overland Park, KS. Interior, exterior, ceramic coating & more — we come to your home or office. Book your free quote today.",
   keywords: [
     "mobile car detailing Overland Park",
     "auto detailing Overland Park KS",
@@ -38,38 +37,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: BUSINESS.url,
     siteName: BUSINESS.name,
-    title: `${BUSINESS.name} | Mobile Detailing in Overland Park, KS`,
-    description:
-      "Professional mobile car detailing in Overland Park, KS. We come to you with exterior & interior detailing, ceramic coating, and more.",
     images: [
       {
-        url: "/images/og-default.jpg",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: `${BUSINESS.name} - Mobile Car Detailing`,
+        alt: "LuxeRide Mobile Car Detailing in Overland Park, KS",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${BUSINESS.name} | Mobile Detailing in Overland Park, KS`,
-    description:
-      "Professional mobile car detailing in Overland Park, KS. We come to you with exterior & interior detailing, ceramic coating, and more.",
-    images: ["/images/og-default.jpg"],
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,
     follow: true,
     googleBot: { index: true, follow: true },
-  },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
-  alternates: {
-    canonical: BUSINESS.url,
   },
 };
 

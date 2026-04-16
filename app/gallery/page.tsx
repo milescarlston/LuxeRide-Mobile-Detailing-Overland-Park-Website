@@ -2,18 +2,28 @@ import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import BeforeAfterGallery from "@/components/BeforeAfterGallery";
 import CTASection from "@/components/CTASection";
-import { BUSINESS } from "@/lib/constants";
+import { BUSINESS, OG_IMAGES, OG_IMAGE_URL } from "@/lib/constants";
+
+const TITLE = "Detailing Results & Gallery | LuxeRide Mobile Detailing Overland Park";
+const DESCRIPTION =
+  "See real before-and-after results from LuxeRide Mobile Detailing in Overland Park. Exterior details, interior cleanings, ceramic coatings, and more.";
 
 export const metadata: Metadata = {
-  title: "Car Detailing Results Overland Park - Before & After Gallery",
-  description:
-    "See real before and after car detailing results from LuxeRide in Overland Park, KS. Ceramic coating, interior and exterior detail transformations.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/gallery" },
   openGraph: {
-    title: `Detailing Gallery | ${BUSINESS.name}`,
-    description:
-      "Before and after car detailing transformations from our Overland Park mobile detailing service.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "/gallery",
+    type: "website",
+    images: OG_IMAGES,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE_URL],
   },
 };
 

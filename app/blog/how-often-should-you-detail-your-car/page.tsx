@@ -2,22 +2,37 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
-import { BUSINESS } from "@/lib/constants";
+import { BUSINESS, OG_IMAGES, OG_IMAGE_URL } from "@/lib/constants";
 import { articleSchema } from "@/lib/schema";
 
-const title = "How Often Should You Detail Your Car?";
-const description =
-  "Learn how often to detail your car based on climate, driving habits, and vehicle needs. Expert tips from Overland Park's trusted mobile detailer.";
 const slug = "how-often-should-you-detail-your-car";
+const title = "How Often Should You Detail Your Car?";
+const TITLE = "How Often Should You Detail Your Car? | LuxeRide Detailing Blog";
+const DESCRIPTION =
+  "Wondering how often to detail your car? It depends on your driving habits, environment, and vehicle. Here's a practical guide from Overland Park detailing pros.";
+const PUBLISHED = "2024-12-15";
+const MODIFIED = "2024-12-15";
+const description = DESCRIPTION;
 
 export const metadata: Metadata = {
-  title,
-  description,
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: `/blog/${slug}` },
   openGraph: {
-    title: `${title} | ${BUSINESS.name}`,
-    description,
+    title: TITLE,
+    description: DESCRIPTION,
     url: `/blog/${slug}`,
+    type: "article",
+    publishedTime: PUBLISHED,
+    modifiedTime: MODIFIED,
+    authors: [BUSINESS.name],
+    images: OG_IMAGES,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE_URL],
   },
 };
 

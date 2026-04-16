@@ -6,19 +6,35 @@ import TestimonialCard from "@/components/TestimonialCard";
 import HowItWorks from "@/components/HowItWorks";
 import ServiceAreaMap from "@/components/ServiceAreaMap";
 import CTASection from "@/components/CTASection";
-import { BUSINESS, SERVICES, TESTIMONIALS } from "@/lib/constants";
+import {
+  BUSINESS,
+  SERVICES,
+  TESTIMONIALS,
+  OG_IMAGES,
+  OG_IMAGE_URL,
+} from "@/lib/constants";
 import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 
+const TITLE = "Mobile Car Detailing Overland Park, KS | LuxeRide Mobile Detailing";
+const DESCRIPTION =
+  "Professional mobile car detailing in Overland Park, KS. Interior, exterior, ceramic coating & more — we come to your home or office. Book your free quote today.";
+
 export const metadata: Metadata = {
-  title: `Mobile Car Detailing Overland Park | ${BUSINESS.name}`,
-  description:
-    "Professional mobile car detailing in Overland Park, KS. We come to your home or office. Exterior, interior, ceramic coating and more. Book a free quote today!",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/" },
   openGraph: {
-    title: `Mobile Car Detailing Overland Park | ${BUSINESS.name}`,
-    description:
-      "Professional mobile car detailing in Overland Park, KS. We come to you with exterior & interior detailing, ceramic coating, and more.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "/",
+    type: "website",
+    images: OG_IMAGES,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE_URL],
   },
 };
 

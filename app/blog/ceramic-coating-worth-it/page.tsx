@@ -2,24 +2,37 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CTASection from "@/components/CTASection";
-import { BUSINESS } from "@/lib/constants";
+import { BUSINESS, OG_IMAGES, OG_IMAGE_URL } from "@/lib/constants";
 import { articleSchema } from "@/lib/schema";
 
-const title = "Is Ceramic Coating Worth It? A Detailed Breakdown";
-const description =
-  "Is ceramic coating worth it? We break down the real costs, benefits, longevity, and performance so you can decide if ceramic coating is right for your car.";
 const slug = "ceramic-coating-worth-it";
+const title = "Is Ceramic Coating Worth It? A Detailed Breakdown";
+const TITLE = "Is Ceramic Coating Worth It? Pros, Cons & Cost | LuxeRide Blog";
+const DESCRIPTION =
+  "Is ceramic coating worth the investment? We break down the real pros, cons, cost, and how long it lasts — from a detailing team that applies it every week.";
+const PUBLISHED = "2024-11-28";
+const MODIFIED = "2024-11-28";
+const description = DESCRIPTION;
 
 export const metadata: Metadata = {
-  title,
-  description,
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: `/blog/${slug}` },
   openGraph: {
-    title,
-    description,
+    title: TITLE,
+    description: DESCRIPTION,
     url: `/blog/${slug}`,
     type: "article",
-    siteName: BUSINESS.name,
+    publishedTime: PUBLISHED,
+    modifiedTime: MODIFIED,
+    authors: [BUSINESS.name],
+    images: OG_IMAGES,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE_URL],
   },
 };
 
