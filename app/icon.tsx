@@ -16,16 +16,17 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#1E5FAE",
-          borderRadius: "6px",
+          background: "linear-gradient(135deg, #1E5FAE 0%, #164a8a 100%)",
+          borderRadius: "7px",
         }}
       >
         <span
           style={{
-            fontSize: 18,
-            fontWeight: 800,
+            fontSize: 20,
+            fontWeight: 900,
             color: "#FFFFFF",
-            letterSpacing: "-0.5px",
+            letterSpacing: "-1.5px",
+            fontFamily: "system-ui, -apple-system, sans-serif",
           }}
         >
           LR
