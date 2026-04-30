@@ -103,7 +103,7 @@ export default function OpenGraphImage() {
               borderRadius: 10,
             }}
           >
-            Get a Free Quote
+            Book online
           </span>
         </div>
       </div>

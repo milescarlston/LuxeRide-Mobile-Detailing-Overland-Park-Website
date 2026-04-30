@@ -358,7 +358,6 @@ export default function InteriorDetailPage() {
       <CTASection
         headline="Ready for a Clean Interior?"
         description="Book your interior detail today and we'll come right to your driveway. We serve Overland Park and the entire Kansas City metro."
-        buttonText="Schedule Your Interior Detail"
       />
     </>
   );

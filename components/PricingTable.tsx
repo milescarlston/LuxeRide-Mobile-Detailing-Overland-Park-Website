@@ -1,10 +1,22 @@
-import Link from "next/link";
+import { BOOKING_CTA_LABEL, BOOKING_URL } from "@/lib/constants";
 import type { VehicleTier, CoatingTier } from "@/lib/constants";
+
+function BookButton() {
+  return (
+    <a
+      href={BOOKING_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center justify-center rounded-lg bg-[#10B981] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#059669]"
+    >
+      {BOOKING_CTA_LABEL}
+    </a>
+  );
+}
 
 export function VehiclePricingTable({
   tiers,
   estimatedTime,
-  popular,
 }: {
   tiers: VehicleTier[];
   estimatedTime: string;
@@ -32,16 +44,11 @@ export function VehiclePricingTable({
           <span className="font-medium text-[#1C1C1C]">Estimated time:</span>{" "}
           {estimatedTime}
         </div>
-        <Link
-          href="/contact"
-          className="inline-flex items-center justify-center rounded-lg bg-[#10B981] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#059669]"
-        >
-          Get a Free Quote
-        </Link>
+        <BookButton />
       </div>
       <p className="mt-4 text-sm text-[#4A4A4A]">
-        Final pricing depends on your vehicle&apos;s size and condition. Contact
-        us for an exact quote — no surprises.
+        Final pricing depends on your vehicle&apos;s size and condition. Reach
+        out for an exact quote — no surprises.
       </p>
     </div>
   );
@@ -84,12 +91,7 @@ export function CoatingPricingTable({
           <span className="font-medium text-[#1C1C1C]">Estimated time:</span>{" "}
           {estimatedTime}
         </div>
-        <Link
-          href="/contact"
-          className="inline-flex items-center justify-center rounded-lg bg-[#10B981] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#059669]"
-        >
-          Get a Free Quote
-        </Link>
+        <BookButton />
       </div>
       <p className="mt-4 text-sm text-[#4A4A4A]">
         Exact pricing depends on vehicle size and paint condition. We&apos;ll
@@ -135,12 +137,7 @@ export function HeadlightPricingTable({
           <span className="font-medium text-[#1C1C1C]">Estimated time:</span>{" "}
           {estimatedTime}
         </div>
-        <Link
-          href="/contact"
-          className="inline-flex items-center justify-center rounded-lg bg-[#10B981] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#059669]"
-        >
-          Book Your Restoration
-        </Link>
+        <BookButton />
       </div>
     </div>
   );

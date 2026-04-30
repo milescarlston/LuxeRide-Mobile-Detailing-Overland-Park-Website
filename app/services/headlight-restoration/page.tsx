@@ -3,7 +3,14 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
-import { BUSINESS, SERVICES, OG_IMAGES, OG_IMAGE_URL } from "@/lib/constants";
+import {
+  BOOKING_CTA_LABEL,
+  BOOKING_URL,
+  BUSINESS,
+  SERVICES,
+  OG_IMAGES,
+  OG_IMAGE_URL,
+} from "@/lib/constants";
 import { serviceSchema, faqSchema } from "@/lib/schema";
 import { HeadlightPricingTable } from "@/components/PricingTable";
 
@@ -113,12 +120,14 @@ export default function HeadlightRestorationPage() {
               car looks great and you can actually see the road at night.
             </p>
             <div className="mt-8">
-              <Link
-                href="/contact"
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block rounded-md bg-[#10B981] px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#059669]"
               >
-                Get a Free Quote
-              </Link>
+                {BOOKING_CTA_LABEL}
+              </a>
             </div>
           </div>
         </div>
@@ -340,7 +349,6 @@ export default function HeadlightRestorationPage() {
       <CTASection
         headline="Ready to See the Road Again?"
         description="Stop squinting through foggy headlights. Book your restoration today and we will come to you."
-        buttonText="Schedule Headlight Restoration"
       />
     </>
   );

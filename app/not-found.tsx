@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SERVICES, OG_IMAGES, OG_IMAGE_URL } from "@/lib/constants";
+import {
+  BOOKING_CTA_LABEL,
+  BOOKING_URL,
+  SERVICES,
+  OG_IMAGES,
+  OG_IMAGE_URL,
+} from "@/lib/constants";
 
 const TITLE = "Page Not Found | LuxeRide Mobile Car Detailing Overland Park";
 const DESCRIPTION =
@@ -44,12 +50,14 @@ export default function NotFound() {
         >
           Go Home
         </Link>
-        <Link
-          href="/contact"
+        <a
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center justify-center rounded-lg border border-gray-300 px-7 py-3 text-sm font-semibold text-[#1C1C1C] transition-colors hover:border-[#1E5FAE] hover:text-[#1E5FAE]"
         >
-          Contact Us
-        </Link>
+          {BOOKING_CTA_LABEL}
+        </a>
       </div>
 
       <div className="mt-14 w-full max-w-2xl">

@@ -488,8 +488,6 @@ export default function CeramicCoatingWorthItPage() {
       <CTASection
         headline="Thinking About Ceramic Coating?"
         description="We'll take a look at your paint, answer your questions, and help you decide if ceramic coating is the right move for your car."
-        buttonText="Get a Free Quote"
-        buttonHref="/contact"
       />
     </>
   );

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BUSINESS, SERVICE_AREAS, SERVICES } from "@/lib/constants";
+import { BOOKING_CTA_LABEL, BOOKING_URL, BUSINESS, SERVICE_AREAS, SERVICES } from "@/lib/constants";
 
 export default function Footer() {
   return (
@@ -97,8 +97,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <a
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-[#4A4A4A] transition-colors hover:text-[#1E5FAE]"
+                >
+                  {BOOKING_CTA_LABEL}
+                </a>
+              </li>
+              <li>
                 <Link href="/contact" className="text-sm text-[#4A4A4A] transition-colors hover:text-[#1E5FAE]">
-                  Contact / Book Now
+                  Contact
                 </Link>
               </li>
             </ul>

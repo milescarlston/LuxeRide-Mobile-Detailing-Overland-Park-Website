@@ -381,7 +381,6 @@ export default function FullDetailPage() {
       <CTASection
         headline="Ready for a Complete Clean?"
         description="Book your full car detail in Overland Park today. We come to you and take care of everything from bumper to bumper."
-        buttonText="Book Your Full Detail"
       />
     </>
   );

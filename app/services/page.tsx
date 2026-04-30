@@ -78,8 +78,7 @@ export default function ServicesPage() {
 
       <CTASection
         headline="Not Sure Which Service You Need?"
-        description="Give us a call or send a message. We'll help you figure out the best option for your car and your budget."
-        buttonText="Get a Free Quote"
+        description="Give us a call or book online and we'll help you figure out the best option for your car and your budget."
       />
     </>
   );

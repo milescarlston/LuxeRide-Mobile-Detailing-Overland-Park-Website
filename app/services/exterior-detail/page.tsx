@@ -337,7 +337,6 @@ export default function ExteriorDetailPage() {
       <CTASection
         headline="Ready to See the Difference?"
         description="Book your mobile exterior detail today. We come to your home or office in Overland Park. No drop-off, no waiting room, no hassle."
-        buttonText="Book Your Exterior Detail"
       />
     </>
   );

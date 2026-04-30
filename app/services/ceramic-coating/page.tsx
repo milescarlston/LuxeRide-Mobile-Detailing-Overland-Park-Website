@@ -374,7 +374,6 @@ export default function CeramicCoatingPage() {
       <CTASection
         headline="Want to Protect Your Paint for Years?"
         description="We come to your home or office in Overland Park and handle everything. Just book a time that works for you and we will take it from there."
-        buttonText="Get a Free Quote"
       />
     </>
   );

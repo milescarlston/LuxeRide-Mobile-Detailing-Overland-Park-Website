@@ -7,6 +7,8 @@ import HowItWorks from "@/components/HowItWorks";
 import ServiceAreaMap from "@/components/ServiceAreaMap";
 import CTASection from "@/components/CTASection";
 import {
+  BOOKING_CTA_LABEL,
+  BOOKING_URL,
   BUSINESS,
   SERVICES,
   TESTIMONIALS,
@@ -67,12 +69,14 @@ export default function HomePage() {
                 Your car gets the full treatment while you go about your day.
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <Link
-                  href="/contact"
+                <a
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-lg bg-[#10B981] px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#059669]"
                 >
-                  Get a Free Quote
-                </Link>
+                  {BOOKING_CTA_LABEL}
+                </a>
                 <a
                   href={BUSINESS.phoneHref}
                   className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-300 px-7 py-3.5 text-base font-semibold text-[#1C1C1C] transition-colors hover:border-[#1E5FAE] hover:text-[#1E5FAE]"

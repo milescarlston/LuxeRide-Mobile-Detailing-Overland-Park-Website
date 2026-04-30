@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { NAV_LINKS, BUSINESS } from "@/lib/constants";
+import { BOOKING_CTA_LABEL, BOOKING_URL, BUSINESS, NAV_LINKS } from "@/lib/constants";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -78,12 +78,14 @@ export default function Header() {
             </svg>
             {BUSINESS.phone}
           </a>
-          <Link
-            href="/contact"
+          <a
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden rounded-lg bg-[#10B981] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#059669] sm:inline-block"
           >
-            Get a Free Quote
-          </Link>
+            {BOOKING_CTA_LABEL}
+          </a>
           <button
             type="button"
             className="inline-flex items-center justify-center rounded-md p-2 text-[#4A4A4A] transition-colors hover:text-[#1E5FAE] lg:hidden"
@@ -175,13 +177,15 @@ export default function Header() {
                 </svg>
                 {BUSINESS.phone}
               </a>
-              <Link
-                href="/contact"
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block rounded-lg bg-[#10B981] px-4 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-[#059669]"
                 onClick={() => setMobileOpen(false)}
               >
-                Get a Free Quote
-              </Link>
+                {BOOKING_CTA_LABEL}
+              </a>
             </li>
           </ul>
         </div>
